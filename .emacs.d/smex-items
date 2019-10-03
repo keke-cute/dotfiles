@@ -1,0 +1,23 @@
+
+;; ----- smex-history -----
+(
+ shell
+ telega
+ package-install
+ package-delete
+ eval-expression
+ package-menu-mark-upgrades
+ package-refresh-contents
+)
+
+;; ----- smex-data -----
+(
+ (package-install . 6)
+ (package-delete . 4)
+ (package-refresh-contents . 1)
+ (package-menu-mark-upgrades . 2)
+ (telega . 58)
+ (eval-expression . 7)
+ (telega-logout . 1)
+ (shell . 4)
+)
