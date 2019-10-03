@@ -19,5 +19,5 @@
  (telega . 58)
  (eval-expression . 7)
  (telega-logout . 1)
- (shell . 4)
+ (shell . 5)
 )
