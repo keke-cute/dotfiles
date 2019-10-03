@@ -28,7 +28,7 @@ There are two things you can do about this warning:
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (telega yasnippet-snippets yasnippet flycheck smex expand-region company))))
+    (yasnippet-snippets yasnippet flycheck smex expand-region company))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -65,9 +65,6 @@ There are two things you can do about this warning:
 (global-flycheck-mode)
 ;;开启yasnippet 强大的文本模板输入工具
 (yas-global-mode 1)
-;;Telega
-(add-to-list 'load-path "~/telega.el")
-(require 'telega)
 ;;主题配置
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 (load-theme `wilmersdorf t)
