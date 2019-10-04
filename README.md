@@ -3,6 +3,7 @@
 ![ScreenShot](screenshot.png)
 ## Details
 * OS:Void Linux
+* SHEEL:Fish
 * WM:DWM
 * WMBAR:Conky
 * TERMINAL:ST
