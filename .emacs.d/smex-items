@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
+ tooltip-mode
+ tool-bar-mode
  package-delete
  shell
  package-install
  eval-expression
  package-menu-mark-upgrades
- package-refresh-contents
- cd
 )
 
 ;; ----- smex-data -----
@@ -20,4 +20,6 @@
  (eval-expression . 7)
  (telega-logout . 1)
  (shell . 5)
+ (tool-bar-mode . 2)
+ (tooltip-mode . 5)
 )
