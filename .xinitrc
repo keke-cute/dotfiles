@@ -56,4 +56,5 @@ fi
 exec feh --bg-fill ~/Downloads/77081197_p0.png &
 exec compton --config ~/.config/compton.conf &
 (conky | while read LINE; do xsetroot -name "$LINE"; done) &
+exec ibus-daemon -drx &
 exec dwm
