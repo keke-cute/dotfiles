@@ -53,7 +53,7 @@ fi
 #xterm -geometry 80x50+494+51 &
 #xterm -geometry 80x20+494-0 &
 #exec xterm -geometry 80x66+0+0 -name login
-exec feh --bg-fill ~/Downloads/77081197_p0.png &
+exec feh --bg-fill ~/Downloads/5678eecf2e5c1.jpg &
 exec compton --config ~/.config/compton.conf &
 (conky | while read LINE; do xsetroot -name "$LINE"; done) &
 exec ibus-daemon -drx &

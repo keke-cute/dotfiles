@@ -4,9 +4,9 @@
 ## Details
 * OS:Void Linux
 * SHEEL:Fish
-* WM:DWM
+* WM:DWM Fork By (https://github.com/LukeSmithxyz/dwm)
 * WMBAR:Conky
-* TERMINAL:ST
+* TERMINAL:ST Fork By (https://github.com/LukeSmithxyz/st)
 * FILEMANAGER:Ranger
 * EDITOR:Emacs
 * BROWSER:FireFox
