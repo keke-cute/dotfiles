@@ -35,8 +35,14 @@ There are two things you can do about this warning:
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+
 ;; 关闭工具栏，tool-bar-mode 即为一个 Minor Mode
 (tool-bar-mode -1)
+;;设置选中后再次输入模式为替换
+(delete-selection-mode 1)
+;;高亮当前行
+(global-hl-line-mode 1)
 ;; 关闭文件滑动控件
 (scroll-bar-mode -1)
 ;; 显示行号
@@ -45,7 +51,7 @@ There are two things you can do about this warning:
 (setq-default cursor-type 'bar)
 ;; 关闭备份
 (setq make-backup-files nil)
-;; set a default font
+;; 设置字体
 (when (member "Cascadia Code" (font-family-list))
   (set-face-attribute 'default nil :font "Cascadia Code-10"))
 ;;company 补全插件相关设定 自动完成输入, 支持各种语言和后端

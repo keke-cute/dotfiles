@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
+ help-with-tutorial-spec-language
+ eval-buffer
+ butterfly
  tooltip-mode
  tool-bar-mode
  package-delete
  shell
- package-install
- eval-expression
- package-menu-mark-upgrades
 )
 
 ;; ----- smex-data -----
@@ -22,4 +22,7 @@
  (shell . 5)
  (tool-bar-mode . 2)
  (tooltip-mode . 5)
+ (butterfly . 2)
+ (eval-buffer . 1)
+ (help-with-tutorial-spec-language . 1)
 )
