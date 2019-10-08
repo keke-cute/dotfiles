@@ -1,8 +1,8 @@
 
 ;; ----- smex-history -----
 (
- help-with-tutorial-spec-language
  eval-buffer
+ help-with-tutorial-spec-language
  butterfly
  tooltip-mode
  tool-bar-mode
@@ -23,6 +23,6 @@
  (tool-bar-mode . 2)
  (tooltip-mode . 5)
  (butterfly . 2)
- (eval-buffer . 1)
+ (eval-buffer . 2)
  (help-with-tutorial-spec-language . 1)
 )
