@@ -1,20 +1,20 @@
 
 ;; ----- smex-history -----
 (
+ package-delete
+ package-install
+ package-refresh-contents
  eval-buffer
  help-with-tutorial-spec-language
- butterfly
- tooltip-mode
- tool-bar-mode
- package-delete
+ eval-expression
  shell
 )
 
 ;; ----- smex-data -----
 (
- (package-install . 6)
- (package-delete . 5)
- (package-refresh-contents . 1)
+ (package-install . 10)
+ (package-delete . 6)
+ (package-refresh-contents . 3)
  (package-menu-mark-upgrades . 2)
  (telega . 61)
  (eval-expression . 7)
@@ -25,4 +25,6 @@
  (butterfly . 2)
  (eval-buffer . 2)
  (help-with-tutorial-spec-language . 1)
+ (markdown-preview . 1)
+ (markdown-preview-open-browser . 2)
 )
