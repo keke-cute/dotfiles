@@ -73,4 +73,4 @@ There are two things you can do about this warning:
 (yas-global-mode 1)
 ;;主题配置
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
-(load-theme `wilmersdorf t)
+(load-theme 'dracula t)
