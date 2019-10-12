@@ -1,11 +1,15 @@
-# My DotFiles
-## ScreenShot
-![ScreenShot](screenshot.png)
-## Details
-* OS:Void Linux
-* SHEEL:Fish
-* WM:DWM Fork By (https://github.com/LukeSmithxyz/dwm)
-* WMBAR:Conky
+* My DotFiles
+** ScreenShot
+   [[./screenshot.png]]
+** Details
+*** OS
+    I Use Voidlinux or Arch Linux
+*** SHEEL
+    Fish
+*** WM
+    DWM Fork By (https://github.com/LukeSmithxyz/dwm)
+*** WMBAR
+    Conky
 * TERMINAL:ST Fork By (https://github.com/LukeSmithxyz/st)
 * FILEMANAGER:Ranger
 * EDITOR:Emacs
