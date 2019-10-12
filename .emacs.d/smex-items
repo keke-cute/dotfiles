@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
+ org-agenda
  menu-bar-mode
  package-delete
  package-install
  package-refresh-contents
  eval-buffer
  help-with-tutorial-spec-language
- eval-expression
 )
 
 ;; ----- smex-data -----
@@ -28,4 +28,5 @@
  (markdown-preview . 1)
  (markdown-preview-open-browser . 2)
  (menu-bar-mode . 1)
+ (org-agenda . 2)
 )

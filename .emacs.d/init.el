@@ -36,6 +36,7 @@ There are two things you can do about this warning:
 
 
 ;; 关闭工具栏,菜单栏
+(setq inhibit-splash-screen t)
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 ;;设置选中后再次输入模式为替换
