@@ -1,21 +1,21 @@
 
 ;; ----- smex-history -----
 (
+ package-install
+ package-menu-mark-upgrades
+ package-refresh-contents
  org-agenda
  menu-bar-mode
  package-delete
- package-install
- package-refresh-contents
  eval-buffer
- help-with-tutorial-spec-language
 )
 
 ;; ----- smex-data -----
 (
- (package-install . 10)
+ (package-install . 12)
  (package-delete . 6)
- (package-refresh-contents . 3)
- (package-menu-mark-upgrades . 2)
+ (package-refresh-contents . 4)
+ (package-menu-mark-upgrades . 3)
  (telega . 61)
  (eval-expression . 7)
  (telega-logout . 1)
