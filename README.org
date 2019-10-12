@@ -25,7 +25,7 @@
 *** SCREENSHOT
     Scrot
 *** FONT
-    [Cascadia Code](https://github.com/microsoft/cascadia-code)
+    Cascadia Code (https://github.com/microsoft/cascadia-code)
     Font Awesome 5(Bar icon font)
 *** CHINESE_FONT
     WenQuanYi Micro Hei
