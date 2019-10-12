@@ -10,12 +10,22 @@
     DWM Fork By (https://github.com/LukeSmithxyz/dwm)
 *** WMBAR
     Conky
-* TERMINAL:ST Fork By (https://github.com/LukeSmithxyz/st)
-* FILEMANAGER:Ranger
-* EDITOR:Emacs
-* BROWSER:FireFox
-* LAUCH:Dmenu
-* IMGVIEW:Sxiv
-* SCREENSHOT:Scrot
-* FONT:[Cascadia Code](https://github.com/microsoft/cascadia-code)
-* CHINESE_FONT:WenQuanYi Micro Hei
+*** TERMINAL
+    ST Fork By (https://github.com/LukeSmithxyz/st)
+*** FILEMANAGER
+    Ranger
+*** EDITOR
+    Emacs
+*** BROWSER
+    FireFox
+*** LAUCH
+    Dmenu
+*** IMGVIEW
+    Sxiv
+*** SCREENSHOT
+    Scrot
+*** FONT
+    [Cascadia Code](https://github.com/microsoft/cascadia-code)
+    Font Awesome 5(Bar icon font)
+*** CHINESE_FONT
+    WenQuanYi Micro Hei
