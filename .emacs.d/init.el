@@ -1,5 +1,3 @@
-;;可可酱的EMACS配置文件
-
 ;;MELPA软件源设定
 (require 'package)
 (let* ((no-ssl (and (memq system-type '(windows-nt ms-dos))
@@ -37,7 +35,8 @@ There are two things you can do about this warning:
  )
 
 
-;; 关闭工具栏，tool-bar-mode 即为一个 Minor Mode
+;; 关闭工具栏,菜单栏
+(menu-bar-mode -1)
 (tool-bar-mode -1)
 ;;设置选中后再次输入模式为替换
 (delete-selection-mode 1)
@@ -54,12 +53,12 @@ There are two things you can do about this warning:
 ;; 设置字体
 (when (member "Cascadia Code" (font-family-list))
   (set-face-attribute 'default nil :font "Cascadia Code-10"))
-;;company 补全插件相关设定 自动完成输入, 支持各种语言和后端
+;;company
 (add-hook 'after-init-hook 'global-company-mode)
-;;expand-region 区域选择插件相关设定 快捷键选中文本, 可将选择区域伸缩
+;;expand-region 
 (require 'expand-region)
 (global-set-key (kbd "C-=") 'er/expand-region)
-;;smex 补全命令相关设定 让输入命令变得飞快
+;;smex 
 (require 'smex) ; Not needed if you use package.el
 (smex-initialize) ; Can be omitted. This might cause a (minimal) delay
                   ; when Smex is auto-initialized on its first run.
@@ -67,9 +66,9 @@ There are two things you can do about this warning:
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
 ;; This is your old M-x.
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
-;;flycheck 语法检查 对不同语言做语法检查
+;;flycheck
 (global-flycheck-mode)
-;;开启yasnippet 强大的文本模板输入工具
+;;yasnippet
 (yas-global-mode 1)
 ;;主题配置
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
