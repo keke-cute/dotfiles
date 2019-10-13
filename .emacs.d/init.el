@@ -17,12 +17,6 @@ There are two things you can do about this warning:
     (add-to-list 'package-archives (cons "gnu" (concat proto "://elpa.gnu.org/packages/")))))
 (package-initialize)
 
-
-
-
-
-
-
 (package-initialize)
 (require 'ob-tangle)
 (org-babel-load-file "~/.emacs.d/keke.org")

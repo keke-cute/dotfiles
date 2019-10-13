@@ -1,4 +1,4 @@
-* keke
+* keke 的 emacs 配置文件
 ** UI Settings
 #+begin_src emacs-lisp
 (setq-default cursor-type 'bar)
