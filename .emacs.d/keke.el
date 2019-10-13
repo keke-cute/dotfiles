@@ -11,7 +11,8 @@
 (when (member "Cascadia Code" (font-family-list))
   (set-face-attribute 'default nil :font "Cascadia Code-10"))
 
-(add-hook 'after-init-hook 'global-company-mode)
+(setq org-agenda-files '("~/keke.org"))
+(global-set-key (kbd "C-c a") 'org-agenda)
 
 (require 'expand-region)
 (global-set-key (kbd "C-=") 'er/expand-region)

@@ -1,6 +1,6 @@
-* keke 的 emacs 配置文件
-** UI Settings
-#+begin_src emacs-lisp
+* Keke 的 Emacs 配置文件
+** Ui Settings
+#+Begin_src emacs-lisp
 (setq-default cursor-type 'bar)
 (setq inhibit-splash-screen t)
 (setq make-backup-files nil)
@@ -16,10 +16,12 @@
 (when (member "Cascadia Code" (font-family-list))
   (set-face-attribute 'default nil :font "Cascadia Code-10"))
 #+end_src
-** Company
+** Org-mode
 #+begin_src emacs-lisp
-(add-hook 'after-init-hook 'global-company-mode)
+(setq org-agenda-files '("~/keke.org"))
+(global-set-key (kbd "C-c a") 'org-agenda)
 #+end_src
+
 ** Expand-region
 #+begin_src emacs-lisp
 (require 'expand-region)
