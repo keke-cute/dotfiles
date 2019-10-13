@@ -15,7 +15,7 @@
 *** FILEMANAGER
     Ranger
 *** EDITOR
-    Emacs
+    Emacs (https://github.com/keke-cute/dotfiles/blob/master/.emacs.d/keke.org)
 *** BROWSER
     FireFox
 *** LAUCH
