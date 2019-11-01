@@ -3,7 +3,7 @@
    [[./screenshot.png]]
 ** Details
 *** OS
-    I Use Voidlinux or Arch Linux
+    Void Linux
 *** SHEEL
     Fish
 *** WM
