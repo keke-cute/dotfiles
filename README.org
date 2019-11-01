@@ -7,11 +7,11 @@
 *** SHEEL
     Fish
 *** WM
-    DWM Fork By (https://github.com/LukeSmithxyz/dwm)
+    DWM Fork By (https://github.com/theniceboy/dwm)
 *** WMBAR
-    Conky
+    Fork By (https://github.com/theniceboy/dwm)
 *** TERMINAL
-    ST Fork By (https://github.com/LukeSmithxyz/st)
+    Kitty
 *** FILEMANAGER
     Ranger
 *** EDITOR
@@ -26,6 +26,5 @@
     Scrot
 *** FONT
     Cascadia Code (https://github.com/microsoft/cascadia-code)
-    Font Awesome 5(Bar icon font)
 *** CHINESE_FONT
     WenQuanYi Micro Hei
