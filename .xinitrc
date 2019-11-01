@@ -54,7 +54,5 @@ fi
 #xterm -geometry 80x20+494-0 &
 #exec xterm -geometry 80x66+0+0 -name login
 exec feh --bg-fill ~/Downloads/wall.jpg &
-exec compton --config ~/dotfiles/.config/compton.conf &
-(conky | while read LINE; do xsetroot -name "$LINE"; done) &
-exec ibus-daemon -drx &
+exec compton &
 exec dwm
