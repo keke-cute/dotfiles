@@ -44,7 +44,7 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
+	//{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
 };
 
 /* layout(s) */
@@ -75,6 +75,8 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "kitty", NULL };
 static const char *browsercmd[]  = { "firefox", NULL };
+static const char *emacscmd[] = {"emacs", NULL};
+static const char *thunarcmd[] = {"thunar", NULL};
 static const char *trayercmd[]  = { "/home/keke/scripts/t-toggle.sh", NULL };
 
 static const char *upvol[]   = {"amixer","-q","set","Master","2dB+","unmute",NULL};
@@ -86,6 +88,8 @@ static const char *sktogglecmd[]  = { "/home/keke/scripts/sk-toggle.sh", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
+  { MODKEY,                       XK_f,      spawn,          {.v = thunarcmd } },
+  { MODKEY,                       XK_e,      spawn,          {.v = emacscmd } },
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_c,      spawn,          {.v = browsercmd } },
@@ -95,9 +99,9 @@ static Key keys[] = {
 	{ 0,                       XF86XK_AudioMute, spawn, {.v = mutevol } },
 	{ 0,                       XF86XK_AudioRaiseVolume, spawn, {.v = upvol   } },
 	{ MODKEY,                       XK_b,      spawn,          {.v = wpcmd } },
-	{ MODKEY|ShiftMask,             XK_e,      rotatestack,    {.i = +1 } },
+	{ MODKEY|ShiftMask,             XK_j,      rotatestack,    {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_u,      rotatestack,    {.i = -1 } },
-	{ MODKEY,                       XK_e,      focusstack,     {.i = +1 } },
+	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_u,      focusstack,     {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_h,      incnmaster,     {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_l,      incnmaster,     {.i = -1 } },

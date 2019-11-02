@@ -54,5 +54,5 @@ fi
 #xterm -geometry 80x20+494-0 &
 #exec xterm -geometry 80x66+0+0 -name login
 exec feh --bg-fill ~/Downloads/wall.jpg &
-exec compton &
+exec compton --config dotfiles/.config/compton.conf &
 exec dwm
