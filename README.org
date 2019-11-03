@@ -5,7 +5,7 @@
 *** OS
     Void Linux
 *** SHEEL
-    Fish
+    Zsh
 *** WM
     DWM Fork By (https://github.com/theniceboy/dwm)
 *** WMBAR
@@ -16,6 +16,7 @@
     Ranger
 *** EDITOR
     Emacs (https://github.com/keke-cute/.emacs.d)
+    Doom Emacs(https://github.com/keke-cute/.doom.d)
 *** BROWSER
     FireFox
 *** LAUCH
@@ -26,5 +27,6 @@
     Scrot
 *** FONT
     Cascadia Code (https://github.com/microsoft/cascadia-code)
+    Powerline Fonts(https://github.com/powerline/fonts)
 *** CHINESE_FONT
     WenQuanYi Micro Hei
