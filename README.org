@@ -10,9 +10,7 @@ Themes:
 oh-my-zsh(https://github.com/robbyrussell/oh-my-zsh)
 spaceship-prompt(https://github.com/denysdovhan/spaceship-prompt)
 *** WM
-    DWM Fork By (https://github.com/theniceboy/dwm)
-*** WMBAR
-    Fork By (https://github.com/theniceboy/dwm)
+    DWM
 *** TERMINAL
     Kitty
 *** FILEMANAGER
