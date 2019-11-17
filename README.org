@@ -1,6 +1,6 @@
 * My DotFiles
 ** ScreenShot
-   [[./screenshot.png]]
+   [[./creenshot.png]]
 ** Details
 *** OS
     Void Linux
