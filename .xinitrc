@@ -57,8 +57,6 @@ while true; do
    xsetroot -name "$( date +"%F %R" )"
    sleep 1m    # Update time every minute
 done &
-exec setxkbmap -option ctrl:swapcaps &
-exec xcape -e 'Control_L=Escape' &
 exec feh --bg-fill ~/Downloads/wall.jpg &
 exec compton --config dotfiles/.config/compton.conf &
 exec dwm
