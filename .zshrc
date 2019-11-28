@@ -3,13 +3,15 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/keke/.oh-my-zsh"
-export TERM=xterm
+# export TERM=xterm
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="spaceship"
-
+SPACESHIP_TIME_SHOW="true"
+SPACESHIP_USER_SHOW="always"
+SPACESHIP_HOST_SHOW="always"
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
@@ -68,7 +70,7 @@ ZSH_THEME="spaceship"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -108,3 +110,4 @@ alias xr="sudo xbps-remove"
 alias xisu="sudo xbps-install -Su"
 alias fpush="~/dotfiles/scripts/Fast_Push.sh"
 alias myss="ssh -i Downloads/keke.pem -p 22 admin@kekexyz.xyz"
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
