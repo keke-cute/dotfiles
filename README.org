@@ -27,6 +27,7 @@ spaceship-prompt(https://github.com/denysdovhan/spaceship-prompt)
     Scrot
 *** FONT
     Operator Mono
+    
     Powerline Fonts(https://github.com/powerline/fonts)
 *** CHINESE_FONT
     WenQuanYi Micro Hei
