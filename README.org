@@ -3,7 +3,7 @@
    [[./screenshot.png]]
 ** Details
 *** OS
-    Void Linux
+    Arch Linux & Void Linux
 *** SHEEL
 **** Zsh
 Themes:
@@ -12,12 +12,11 @@ spaceship-prompt(https://github.com/denysdovhan/spaceship-prompt)
 *** WM
     DWM
 *** TERMINAL
-    Kitty
+    St
 *** FILEMANAGER
     Ranger
 *** EDITOR
     Emacs (https://github.com/keke-cute/.emacs.d)
-    Doom Emacs(https://github.com/keke-cute/.doom.d)
 *** BROWSER
     FireFox
 *** LAUCH
@@ -27,7 +26,7 @@ spaceship-prompt(https://github.com/denysdovhan/spaceship-prompt)
 *** SCREENSHOT
     Scrot
 *** FONT
-    Cascadia Code (https://github.com/microsoft/cascadia-code)
+    Operator Mono
     Powerline Fonts(https://github.com/powerline/fonts)
 *** CHINESE_FONT
     WenQuanYi Micro Hei
