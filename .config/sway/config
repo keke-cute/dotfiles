@@ -8,6 +8,12 @@
 #
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
+
+# 隐藏标题栏，设置窗口边框大小，设置窗口间隙
+for_window [class="^.*"] border pixel 3
+gaps inner 6
+gaps outer 0
+smart_gaps on
 # Home row direction keys, like vim
 set $left h
 set $down j
@@ -201,7 +207,7 @@ bindsym $mod+r mode "resize"
 #
 # Read `man 5 sway-bar` for more information about this section.
 bar {
-    position top
+    position bottom
 
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.

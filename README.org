@@ -1,6 +1,9 @@
 * My DotFiles
 ** ScreenShot
-   [[./screenshot.png]]
+*** Xorg
+    [[./screenshot.png]]
+*** Wayland
+    [[./screenshotway.png]]
 ** Details
 *** OS
     Arch Linux & Void Linux
@@ -10,7 +13,7 @@ Themes:
 oh-my-zsh(https://github.com/robbyrussell/oh-my-zsh)
 spaceship-prompt(https://github.com/denysdovhan/spaceship-prompt)
 *** WM
-    DWM
+    Dwm in Xorg
 *** TERMINAL
     St
 *** FILEMANAGER
@@ -24,7 +27,8 @@ spaceship-prompt(https://github.com/denysdovhan/spaceship-prompt)
 *** IMGVIEW
     Sxiv
 *** SCREENSHOT
-    Scrot
+    Scrot in Xorg
+    Grim in Wayland
 *** FONT
     Operator Mono
     
