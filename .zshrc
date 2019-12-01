@@ -12,6 +12,7 @@ ZSH_THEME="spaceship"
 SPACESHIP_TIME_SHOW="true"
 SPACESHIP_USER_SHOW="always"
 SPACESHIP_HOST_SHOW="always"
+SPACESHIP_BATTERY_SHOW="always"
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
