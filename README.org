@@ -1,9 +1,11 @@
 * My DotFiles
 ** ScreenShot
-*** Xorg
+*** Dwm in Xorg
     [[./screenshot.png]]
-*** Wayland
+*** Sway in Wayland
     [[./screenshotway.png]]
+*** Gnome in Wayland
+    [[./screenshotgnome.png]]
 ** Details
 *** OS
     Arch Linux & Void Linux
@@ -16,6 +18,8 @@ spaceship-prompt(https://github.com/denysdovhan/spaceship-prompt)
     Dwm in Xorg
     
     Sway in Wayland
+*** DE
+    Gnome in Wayland
 *** TERMINAL
     St
 *** FILEMANAGER
