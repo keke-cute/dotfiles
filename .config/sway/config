@@ -8,9 +8,7 @@
 #
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
-
-# 隐藏标题栏，设置窗口边框大小，设置窗口间隙
-for_window [class="^.*"] border pixel 3
+font pango:Operator Mono 13
 gaps inner 6
 gaps outer 0
 smart_gaps on
