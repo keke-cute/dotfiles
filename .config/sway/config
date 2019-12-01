@@ -1,12 +1,3 @@
-# Default config for sway
-#
-# Copy this to ~/.config/sway/config and edit it to your liking.
-#
-# Read `man 5 sway` for a complete reference.
-
-### Variables
-#
-# Logo key. Use Mod1 for Alt.
 set $mod Mod4
 font pango:Operator Mono 13
 gaps inner 6
@@ -74,6 +65,7 @@ output * bg ~/Downloads/wall.jpg fill
 
     # Start your launcher
     bindsym $mod+Space exec $menu
+    bindsym $mod+Shift+s exec st ranger
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
