@@ -59,7 +59,8 @@ output * bg ~/Downloads/wall.jpg fill
 #
     # Start a terminal
     bindsym $mod+Shift+Return exec $term
-
+    # Lock Screen
+    bindsym $mod+m exec swaylock
     # Kill focused window
     bindsym $mod+Shift+c kill
 
@@ -206,7 +207,7 @@ bar {
     colors {
         statusline #ffffff
         background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
+    #    inactive_workspace #32323200 #32323200 #5c5c5c
     }
 }
 
