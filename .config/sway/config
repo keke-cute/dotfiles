@@ -1,5 +1,5 @@
 set $mod Mod4
-font pango:Operator Mono 13
+font pango:Operator Mono 14
 gaps inner 6
 gaps outer 0
 smart_gaps on
@@ -29,12 +29,12 @@ output * bg ~/Downloads/wall.jpg fill
 #
 # Example configuration:
 #
-# exec swayidle -w \
-#          timeout 300 'swaylock -f -c 000000' \
-#          timeout 600 'swaymsg "output * dpms off"' \
-#               resume 'swaymsg "output * dpms on"' \
-#          before-sleep 'swaylock -f -c 000000'
-#
+exec swayidle -w \
+         timeout 300 'swaylock -f -c 000000' \
+         timeout 600 'swaymsg "output * dpms off"' \
+              resume 'swaymsg "output * dpms on"' \
+         before-sleep 'swaylock -f -c 000000'
+
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
@@ -192,23 +192,13 @@ mode "resize" {
     bindsym Escape mode "default"
 }
 bindsym $mod+r mode "resize"
-
-#
-# Status Bar:
-#
 # Read `man 5 sway-bar` for more information about this section.
 bar {
     position bottom
-
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %l:%M:%S %p'; do sleep 1; done
-
+    status_command i3blocks
     colors {
         statusline #ffffff
         background #323232
-    #    inactive_workspace #32323200 #32323200 #5c5c5c
     }
 }
-
 include /etc/sway/config.d/*
