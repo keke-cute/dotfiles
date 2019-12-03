@@ -60,7 +60,7 @@ output * bg ~/Downloads/wall.jpg fill
     # Start a terminal
     bindsym $mod+Shift+Return exec $term
     # Lock Screen
-    bindsym $mod+m exec swaylock
+    bindsym $mod+m exec swaylock -i ~/Downloads/wall.jpg
     # Kill focused window
     bindsym $mod+Shift+c kill
 
