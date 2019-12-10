@@ -1,5 +1,6 @@
 set $mod Mod4
 font pango:Operator Mono 15
+for_window [class="^.*"] border pixel 4
 gaps inner 6
 gaps outer 0
 smart_gaps on
