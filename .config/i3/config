@@ -1,4 +1,5 @@
 set $mod Mod4
+for_window [class="^.*"] border pixel 4
 gaps inner 6
 gaps outer 0
 smart_gaps on
