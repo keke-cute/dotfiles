@@ -1,11 +1,6 @@
 * My DotFiles
 ** ScreenShot
-*** Dwm in Xorg
     [[./screenshot.png]]
-*** Sway in Wayland
-    [[./screenshotway.png]]
-*** Gnome in Wayland
-    [[./screenshotgnome.png]]
 ** Details
 *** OS
     Arch Linux & Void Linux
@@ -18,8 +13,6 @@ spaceship-prompt(https://github.com/denysdovhan/spaceship-prompt)
     Dwm in Xorg
     
     Sway in Wayland
-*** DE
-    Gnome in Wayland
 *** TERMINAL
     St
 *** FILEMANAGER
@@ -35,9 +28,3 @@ spaceship-prompt(https://github.com/denysdovhan/spaceship-prompt)
 *** SCREENSHOT
     Scrot in Xorg
     Grim in Wayland
-*** FONT
-    Operator Mono
-    
-    Powerline Fonts(https://github.com/powerline/fonts)
-*** CHINESE_FONT
-    WenQuanYi Micro Hei
