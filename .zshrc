@@ -3,6 +3,7 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/keke/.oh-my-zsh"
+export XDG_DATA_DIRS="/var/lib/flatpak/exports/share:/home/keke/.local/share/flatpak/exports/share"
 # export TERM=xterm
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -110,5 +111,4 @@ alias xi="sudo xbps-install"
 alias xr="sudo xbps-remove"
 alias xisu="sudo xbps-install -Su"
 alias fpush="~/dotfiles/scripts/Fast_Push.sh"
-alias myss="ssh -i Downloads/keke.pem -p 22 admin@kekexyz.xyz"
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
