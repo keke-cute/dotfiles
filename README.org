@@ -2,12 +2,19 @@
 ** ScreenShot
     [[./screenshot.png]]
 ** Details
+*** DWM rebuild
+**** DONE PATCH:
+     alpha https://dwm.suckless.org/patches/alpha/
+     
+     vanitygaps https://dwm.suckless.org/patches/vanitygaps/
 *** OS
     Arch Linux & Void Linux
 *** SHEEL
 **** Zsh
 Themes:
+
 oh-my-zsh(https://github.com/robbyrussell/oh-my-zsh)
+
 spaceship-prompt(https://github.com/denysdovhan/spaceship-prompt)
 *** WM
     Dwm in Xorg
@@ -20,11 +27,12 @@ spaceship-prompt(https://github.com/denysdovhan/spaceship-prompt)
 *** EDITOR
     Emacs (https://github.com/keke-cute/.emacs.d)
 *** BROWSER
-    FireFox
+    Qutebrowser
 *** LAUCH
-    Dmenu
+    Rofi
 *** IMGVIEW
     Sxiv
 *** SCREENSHOT
     Scrot in Xorg
+
     Grim in Wayland
