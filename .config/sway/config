@@ -1,6 +1,6 @@
 set $mod Mod4
 font pango:Operator Mono Book 17
-for_window [class="^.*"] border pixel 4
+for_window [class="^.*"] border pixel 2
 gaps inner 6
 gaps outer 0
 smart_gaps on
@@ -13,7 +13,7 @@ set $right l
 set $term st
 # Your preferred application launcher
 # Note: it's recommended that you pass the final command to sway
-set $menu  dmenu_run -m 0 -fn "Operator Mono Book:size=19"| xargs swaymsg exec --
+set $menu rofi -show run -theme solarized -font "operator Mono Book 17"
 
 ### Output configuration
 #
