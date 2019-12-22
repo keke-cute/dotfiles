@@ -13,5 +13,5 @@ print_disk()
 {
     df -h / | awk '/\//{ printf("%4s/%s\n",$4,$2)}'
 }
-xsetroot -name "$(print_mem)$(print_disk) $(print_date)"
+xsetroot -name "$(print_mem) $(print_disk) $(print_date)"
 exit 0
