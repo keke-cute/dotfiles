@@ -72,7 +72,7 @@ SPACESHIP_BATTERY_SHOW="always"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -111,4 +111,3 @@ alias xi="sudo xbps-install"
 alias xr="sudo xbps-remove"
 alias xisu="sudo xbps-install -Su"
 alias fpush="~/dotfiles/scripts/Fast_Push.sh"
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
