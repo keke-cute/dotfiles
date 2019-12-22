@@ -1,5 +1,8 @@
 * My DotFiles
 ** ScreenShot
+*** Dwm in xorg
+    [[./screenshotdwm.png]]
+*** Sway in wayland
     [[./screenshot.png]]
 ** Details
 *** DWM rebuild
@@ -11,6 +14,8 @@
      awesomebar https://dwm.suckless.org/patches/awesomebar/
 *** OS
     Arch Linux & Void Linux
+    
+    And Learn to use Gentoo
 *** SHEEL
 **** Zsh
 Themes:
