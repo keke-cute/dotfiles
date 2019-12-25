@@ -5,6 +5,13 @@
 *** Sway in wayland
     [[./screenshot.png]]
 ** Details
+*** ST rebuild
+**** DONE PATCH:
+     alpha [[https://st.suckless.org/patches/alpha/]]
+     
+     anysize https://st.suckless.org/patches/anysize/
+
+     nordtheme [[https://st.suckless.org/patches/nordtheme/]]
 *** DWM rebuild
 **** DONE PATCH:
      alpha https://dwm.suckless.org/patches/alpha/
