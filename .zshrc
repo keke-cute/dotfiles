@@ -72,7 +72,7 @@ SPACESHIP_BATTERY_SHOW="always"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -102,7 +102,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias e="emacs -nw"
-alias icat="kitty +kitten icat"
 alias doomr="~/.emacs.d/bin/doom refresh"
 alias doomu="~/.emacs.d/bin/doom upgrade"
 alias doome="~/.emacs.d/bin/doom env"
