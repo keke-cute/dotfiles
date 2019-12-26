@@ -9,7 +9,6 @@ static char *font = "Operator Mono Book:pixelsize=24:antialias=true:autohint=tru
 /* Spare fonts */
 static char *font2[] = {
 	"Inconsolata for Powerline:pixelsize=24:antialias=true:autohint=true",
-/*	"Hack Nerd Font Mono:pixelsize=11:antialias=true:autohint=true", */
 };
 
 static int borderpx = 2;
