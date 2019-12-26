@@ -7,11 +7,7 @@ print_date(){
 }
 print_mem()
 {
-    free -h | awk '/Mem:/ { printf("%s/%s\n",$3,$2)}'
+    free -h | awk '/Mem:/ {printf("%s/%s\n",$3,$2)}'
 }
-print_disk()
-{
-    df -h / | awk '/\//{ printf("%4s/%s\n",$4,$2)}'
-}
-xsetroot -name "$(print_mem) $(print_disk) $(print_date)"
+xsetroot -name "|M:$(print_mem)|T:$(print_date)|"
 exit 0
