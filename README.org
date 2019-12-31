@@ -20,9 +20,9 @@
      
      awesomebar https://dwm.suckless.org/patches/awesomebar/
 *** OS
-    Arch Linux & Void Linux
-    
-    And Learn to use Gentoo
+    Gentoo Linux
+
+    Arch Linux
 *** SHEEL
 **** Zsh
 Themes:
