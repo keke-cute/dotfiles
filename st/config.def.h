@@ -10,6 +10,7 @@ static char *font = "Operator Mono Book:pixelsize=24:antialias=true:autohint=tru
 static char *font2[] = {
 	"Inconsolata for Powerline:pixelsize=24:antialias=true:autohint=true",
 	"Symbola:pixelsize=24:antialias=true:autohint=true",
+	"MesloLGS NF:pixelsize=24:antialias=true:autohint=true",
 };
 
 static int borderpx = 2;
