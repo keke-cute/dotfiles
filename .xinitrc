@@ -60,5 +60,5 @@ do
 done &
 
 exec feh --bg-fill ~/Downloads/wall.png &
-exec compton &
+exec picom &
 exec xmonad
