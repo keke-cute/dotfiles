@@ -13,5 +13,6 @@ antigen apply
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+export GOPATH="$HOME/go"
 export GO111MODULE=on
 export PATH="$PATH:$HOME/go/bin"

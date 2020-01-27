@@ -60,4 +60,5 @@ do
 done &
 
 exec feh --bg-fill ~/Downloads/wall.png &
-exec dwm
+exec compton &
+exec xmonad
