@@ -2,8 +2,6 @@
 ** ScreenShot
 *** Dwm in xorg
     [[./screenshotdwm.png]]
-*** Sway in wayland
-    [[./screenshot.png]]
 ** Details
 *** ST rebuild
 **** DONE PATCH:

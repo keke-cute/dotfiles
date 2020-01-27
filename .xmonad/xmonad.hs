@@ -20,6 +20,6 @@ myConfig = defaultConfig { modMask = mod4Mask , terminal = "st" , borderWidth = 
 myKeys =
     --- Xmonad
         [
-          ("M-<Space>", spawn "rofi -show run")
+          ("M-<Space>", spawn "rofi -combi-modi window,drun,ssh,run -theme lb -show combi")
         ]
 
