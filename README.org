@@ -1,7 +1,6 @@
 * My DotFiles
 ** ScreenShot
-*** Dwm in xorg
-    [[./screenshotdwm.png]]
+   [[./screenshot.png]]
 ** Details
 *** ST rebuild
 **** DONE PATCH:
@@ -19,19 +18,11 @@
      awesomebar https://dwm.suckless.org/patches/awesomebar/
 *** OS
     Gentoo Linux
-
-    Arch Linux
 *** SHEEL
 **** Zsh
-Themes:
-
-oh-my-zsh(https://github.com/robbyrussell/oh-my-zsh)
-
-spaceship-prompt(https://github.com/denysdovhan/spaceship-prompt)
+     Use antigen.zsh
 *** WM
-    Dwm in Xorg
-    
-    Sway in Wayland
+    Xmonad
 *** TERMINAL
     St
 *** FILEMANAGER
@@ -44,7 +35,3 @@ spaceship-prompt(https://github.com/denysdovhan/spaceship-prompt)
     Rofi
 *** IMGVIEW
     Sxiv
-*** SCREENSHOT
-    Scrot in Xorg
-
-    Grim in Wayland
