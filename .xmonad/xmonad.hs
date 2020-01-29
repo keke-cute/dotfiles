@@ -1,8 +1,15 @@
--- Imports.
+------------------------------------------------------------------------
+---IMPORTS
+------------------------------------------------------------------------
+    -- Base
 import XMonad
-import XMonad.Hooks.DynamicLog
+import XMonad.Config
+    -- Utilities
 import XMonad.Util.EZConfig (additionalKeysP, additionalMouseBindings)
-
+    -- Hooks
+import XMonad.Hooks.DynamicLog
+    -- Layouts modifiers
+import XMonad.Layout.Spacing (spacing) 
 -- The main function.
 main = xmonad =<< statusBar myBar myPP toggleStrutsKey myConfig
 
@@ -16,10 +23,8 @@ myPP = xmobarPP { ppCurrent = xmobarColor "#429942" "" . wrap "<" ">" }
 toggleStrutsKey XConfig {XMonad.modMask = modMask} = (modMask, xK_b)
 
 -- Main configuration, override the defaults to your liking.
-myConfig = defaultConfig { modMask = mod4Mask , terminal = "st" , borderWidth = 2 , normalBorderColor  = "#292d3e" , focusedBorderColor = "#bbc5ff"}  `additionalKeysP`         myKeys 
+myConfig = defaultConfig { modMask = mod4Mask , terminal = "st" , borderWidth = 2 , normalBorderColor  = "#292d3e" , focusedBorderColor = "#bbc5ff" , layoutHook = spacing 2 $ Tall 1 (3/100) (1/2)}  `additionalKeysP`         myKeys 
 myKeys =
-    --- Xmonad
         [
           ("M-<Space>", spawn "rofi -combi-modi window,drun,ssh,run -theme lb -show combi")
         ]
-
