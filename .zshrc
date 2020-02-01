@@ -6,7 +6,9 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 #antigen 插件管理器初始化然后下载插件和主题
+
 source ~/antigen.zsh
+antigen use oh-my-zsh
 antigen theme romkatv/powerlevel10k
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
