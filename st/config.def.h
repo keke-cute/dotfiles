@@ -5,12 +5,12 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Operator Mono Book:pixelsize=17:antialias=true:autohint=true";
+static char *font = "Operator Mono Book:pixelsize=19:antialias=true:autohint=true";
 /* Spare fonts */
 static char *font2[] = {
-	"Inconsolata for Powerline:pixelsize=17:antialias=true:autohint=true",
-	"Symbola:pixelsize=17:antialias=true:autohint=true",
-	"MesloLGS NF:pixelsize=17:antialias=true:autohint=true",
+	"Inconsolata for Powerline:pixelsize=19:antialias=true:autohint=true",
+	"Symbola:pixelsize=19:antialias=true:autohint=true",
+	"MesloLGS NF:pixelsize=19:antialias=true:autohint=true",
 };
 
 static int borderpx = 2;
@@ -89,7 +89,7 @@ char *termname = "st-256color";
  */
 unsigned int tabspaces = 8;
 /* bg opacity */
-float alpha = 0.8;
+float alpha = 0.7;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
@@ -138,7 +138,7 @@ static unsigned int defaultrcs = 257;
  * 6: Bar ("|")
  * 7: Snowman ("☃")
  */
-static unsigned int cursorshape = 6;
+static unsigned int cursorshape = 2;
 
 /*
  * Default columns and rows numbers

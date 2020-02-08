@@ -22,12 +22,22 @@ export GOPATH="$HOME/go"
 export GO111MODULE=on
 export PATH="$PATH:$HOME/go/bin"
 
-# 自动补全
+#补全 
 autoload -U compinit
-compinit
 zstyle ':completion:*' menu select
-setopt completealiases
+zmodload zsh/complist
+compinit
+_comp_options+=(globdots)		# Include hidden files.
 
 #别名
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
+# vi mode
+bindkey -v
+export KEYTIMEOUT=1
+# Use vim keys in tab complete menu:
+bindkey -M menuselect 'h' vi-backward-char
+bindkey -M menuselect 'k' vi-up-line-or-history
+bindkey -M menuselect 'l' vi-forward-char
+bindkey -M menuselect 'j' vi-down-line-or-history
+bindkey -v '^?' backward-delete-char
