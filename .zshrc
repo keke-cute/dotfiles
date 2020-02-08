@@ -47,7 +47,7 @@ alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 alias sp="sudo poweroff"
 alias sr="sudo reboot"
 ##git
-alias fpush="git add . && git commit -m \"fust push\" && git push"
+alias fp="git add . && git commit -m \"fust push\" && git push"
 # vi mode
 bindkey -v
 export KEYTIMEOUT=1
