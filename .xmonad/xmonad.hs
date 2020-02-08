@@ -23,7 +23,15 @@ myPP = xmobarPP { ppCurrent = xmobarColor "#429942" "" . wrap "<" ">" }
 toggleStrutsKey XConfig {XMonad.modMask = modMask} = (modMask, xK_b)
 
 -- Main configuration, override the defaults to your liking.
-myConfig = defaultConfig { modMask = mod4Mask , terminal = "st" , borderWidth = 2 , normalBorderColor  = "#292d3e" , focusedBorderColor = "#bbc5ff" , layoutHook = spacing 2 $ Tall 1 (3/100) (1/2)}  `additionalKeysP`         myKeys 
+myConfig = defaultConfig
+  {
+    modMask = mod4Mask
+  , terminal = "st"
+  , borderWidth = 2
+  , normalBorderColor  = "#292d3e"
+  , focusedBorderColor = "#bbc5ff"
+  , layoutHook = spacing 2 $ Tall 1 (3/100) (1/2)
+  }  `additionalKeysP`         myKeys 
 myKeys =
         [
           ("M-<Space>", spawn "rofi -font \"Operator Mono Book 15\" -combi-modi window,drun,ssh,run -theme lb -show combi")
