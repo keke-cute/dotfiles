@@ -48,12 +48,5 @@ alias sp="sudo poweroff"
 alias sr="sudo reboot"
 ##git
 alias fp="git add . && git commit -m \"fust push\" && git push"
-# vi mode
-bindkey -v
-export KEYTIMEOUT=1
-#给补全菜单应用Vi 键位
-bindkey -M menuselect 'h' vi-backward-char
-bindkey -M menuselect 'k' vi-up-line-or-history
-bindkey -M menuselect 'l' vi-forward-char
-bindkey -M menuselect 'j' vi-down-line-or-history
-bindkey -v '^?' backward-delete-char
+##misc
+alias e="emacs -nw"
