@@ -3,8 +3,8 @@
 
 ;;; Startup Programs
 ;;; Set Background
-;;; (run-shell-command "nitrogen --restore")
-;;; (run-shell-command "compton")
+(run-shell-command "feh --bg-fill ~/Downloads/wall.png")
+(run-shell-command "picom")
 
 (defun show-kernel ()
   (let ((ip (run-shell-command "uname -r" t)))
@@ -14,9 +14,9 @@
   (let ((host-name (run-shell-command "cat /etc/hostname" t)))
     (substitute #\Space #\Newline host-name)))
 
-(defun show-package-count ()
-  (let ((host-name (run-shell-command "pacman -Q | wc -l" t)))
-    (substitute #\Space #\Newline host-name)))
+;;;(defun show-package-count ()
+;;;  (let ((host-name (run-shell-command "pacman -Q | wc -l" t)))
+;;;    (substitute #\Space #\Newline host-name)))
 
 (defvar color1 "#ff92d0")
 (defvar color2 "#282a36")
@@ -66,7 +66,7 @@
 ;; Launch Emacs
 (define-key *root-map* (kbd "C-e") "exec emacs")
 ;; Launch Dmenu
-(define-key *root-map* (kbd "d") "exec rofi -show run")
+(define-key *root-map* (kbd "d") "exec rofi -combi-modi window,drun,ssh,run -theme lb -show combi")
 
 ;; Clear rules
 (clear-window-placement-rules)
