@@ -18,6 +18,7 @@
 
 ;; yuxiazaibao
 (straight-use-package 'use-package)
+(straight-use-package 'haskell-mode)
 
 ;; jiazaiwaijiepeizhiwenjian
 (require 'basic)
