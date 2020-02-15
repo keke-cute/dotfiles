@@ -1,1 +1,1 @@
-exec ck-launch-session dbus-launch --sh-syntax --exit-with-session stumpwm
+exec ck-launch-session dbus-launch --sh-syntax --exit-with-session xmonad
