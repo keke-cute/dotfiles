@@ -1,10 +1,9 @@
 import XMonad
 import XMonad.Hooks.DynamicLog
-import XMonad.Hooks.ManageDocks
-import XMonad.Util.Run(spawnPipe)
 import XMonad.Util.EZConfig(additionalKeys)
-import System.IO
-
+import XMonad.Util.SpawnOnce
+import XMonad.Hooks.SetWMName
+import XMonad.Hooks.EwmhDesktops
 -- The main function.
 main = xmonad =<< statusBar myBar myPP toggleStrutsKey myConfig
 
@@ -22,6 +21,11 @@ myConfig = defaultConfig
            {
              modMask = mod4Mask
              , terminal = "st"
+             , borderWidth = 2
+             , normalBorderColor = "#cccccc"
+             , focusedBorderColor = "#cd8b00"
+             , startupHook = myStartupHook
+             , handleEventHook    = fullscreenEventHook
              } `additionalKeys`   
         [ ((mod4Mask .|. shiftMask, xK_z), spawn "xscreensaver-command -lock")
         , ((controlMask, xK_Print), spawn "sleep 0.2; scrot -s")
@@ -29,3 +33,7 @@ myConfig = defaultConfig
         , ((mod4Mask, xK_d), spawn "rofi -combi-modi window,drun,ssh,run -theme lb -show combi")
         ]
            
+myStartupHook = do
+          spawnOnce "picom"
+          spawnOnce "feh --bg-fill ~/Downloads/wall.png"
+          setWMName "LG3D"
