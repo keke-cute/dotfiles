@@ -1,3 +1,4 @@
 Config { font    = "xft:Operator Mono Book:pixelsize=14:antialias=true:hinting=true"
+       , additionalFonts = [ "xft:Sarasa Mono SC:pixelsize=13" ]
        , alpha	 = 200
        }
