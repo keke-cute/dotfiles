@@ -18,9 +18,10 @@
 (delete-selection-mode 1)
 ;; 设置h 文件默认为c++文件
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
-
+;; 设置主题
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 (load-theme 'dracula t)
-
+;; 设置字体
+(set-frame-font "Operator Mono Book")
 
 (provide 'basic)
