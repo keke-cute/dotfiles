@@ -1,4 +1,4 @@
-;; zhujiemiansheding
+;;; 主界面及透明度
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
@@ -8,7 +8,6 @@
 (add-to-list 'default-frame-alist'(ns-appearance . dark))
 (add-to-list 'default-frame-alist'(alpha . (80 . 75)))
 
-;; 一些默认设置项目
 ;; 自动加载外部修改过的文件
 (global-auto-revert-mode 1)
 ;; 关闭自己生产的保存文件
