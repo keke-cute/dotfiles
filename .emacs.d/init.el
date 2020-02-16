@@ -19,10 +19,7 @@
 ;; 预下载基础包
 (straight-use-package 'use-package)
 (straight-use-package 'haskell-mode)
-(straight-use-package 'ox-hugo)
 
-(use-package ox-hugo
-  :after ox)
 ;; 加载外部的配置文件
 (require 'pyim)
 (require 'basic)
