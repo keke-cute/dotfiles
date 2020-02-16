@@ -19,7 +19,8 @@
 ;; 设置h 文件默认为c++文件
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
 
-
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
+(load-theme 'dracula t)
 
 
 (provide 'basic)
