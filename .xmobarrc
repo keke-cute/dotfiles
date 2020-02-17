@@ -1,4 +1,10 @@
 Config { font    = "xft:Operator Mono Book:pixelsize=14:antialias=true:hinting=true"
        , additionalFonts = [ "xft:Sarasa Mono SC:pixelsize=13" ]
-       , alpha	 = 200
+       , commands = [ Run Date "%a, %b %d %Y, %H:%M:%S" "date" 10
+       	            , Run Com "/home/keke/dotfiles/scripts/trayer-padding-icon.sh" [] "trayerpad" 10
+		    , Run StdinReader
+       	 	    ]
+       , sepChar = "%"
+       , alignSep = "}{"
+       , template = "%StdinReader% }{ %date%|%trayerpad%"
        }
