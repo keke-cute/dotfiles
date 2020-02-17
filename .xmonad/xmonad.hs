@@ -39,3 +39,4 @@ myStartupHook = do
           setWMName "LG3D"
           spawnOnce "trayer --edge top --align right --SetDockType true --SetPartialStrut false --expand true --height 17 --transparent true --alpha 0 --tint 0x000000 --widthtype request"
           spawnOnce "start-pulseaudio-x11"
+          spawnOnce "fcitx"
