@@ -24,3 +24,4 @@
 (require 'pyim)
 (require 'basic)
 (require 'package)
+(put 'upcase-region 'disabled nil)
