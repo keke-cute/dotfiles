@@ -20,7 +20,7 @@
 (straight-use-package 'use-package)
 
 ;; 加载外部的配置文件
+(require 'packages)
 (require 'pyim)
 (require 'basic)
-(require 'package)
 (require 'lang)
