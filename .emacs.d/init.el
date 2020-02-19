@@ -25,3 +25,4 @@
 (require 'basic)
 (require 'lang)
 (require 'run)
+(require 'keybind)

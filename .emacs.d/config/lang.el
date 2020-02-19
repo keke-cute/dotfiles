@@ -5,8 +5,8 @@
 (straight-use-package 'lsp-mode)
 (use-package lsp-mode
   :commands (lsp lsp-deferred)
-  ;; 除了这一条，其他均为C++的LSP 配置，因为已在ccls 中 hook C++ mode,所以不需要在此处hook，此处只是hook 了ts,删除ts 支持删这条即可
-  :hook (typescript-mode . lsp-deferred))
+  ;; 除了这一条，其他均为C++的LSP 配置，因为已在ccls 中 hook C++ mode,所以不需要在此处hook，此处只是hook 了ts,html,css
+  :hook ((typescript-mode html-mode css-mode) . lsp-deferred))
 
 (straight-use-package 'lsp-ui)
 (use-package lsp-ui
