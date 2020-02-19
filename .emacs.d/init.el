@@ -18,10 +18,9 @@
 
 ;; 预下载基础包
 (straight-use-package 'use-package)
-(straight-use-package 'haskell-mode)
 
 ;; 加载外部的配置文件
 (require 'pyim)
 (require 'basic)
 (require 'package)
-(put 'upcase-region 'disabled nil)
+(require 'lang)
