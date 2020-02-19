@@ -10,7 +10,7 @@
 	($suffix-map
 	 `(
 	   ("ts" . "node")
-	   ("html" . "firefox")
+	   ("html" . "firefox-bin")
 	   ))
 	   $fname
 	   $fSuffix
