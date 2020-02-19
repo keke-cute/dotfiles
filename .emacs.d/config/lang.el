@@ -21,5 +21,9 @@
   :hook ((c-mode c++-mode objc-mode cuda-mode) .
          (lambda () (require 'ccls) (lsp))))
 (setq ccls-executable "~/ccls/Release/ccls")
-
+;; company
+(use-package company
+  :config
+  (setq company-idle-delay 0)
+  (setq company-minimum-prefix-length 1))
 (provide 'lang)

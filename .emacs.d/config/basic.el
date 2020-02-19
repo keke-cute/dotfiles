@@ -23,6 +23,6 @@
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 (load-theme 'dracula t)
 ;; 设置字体
-(set-frame-font "Sarasa Mono SC 13")
+(set-frame-font "Sarasa Mono SC 14")
 
 (provide 'basic)
