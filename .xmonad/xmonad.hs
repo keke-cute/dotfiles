@@ -29,7 +29,7 @@ myConfig = defaultConfig
              } `additionalKeys`   
         [ ((mod4Mask .|. shiftMask, xK_z), spawn "xscreensaver-command -lock")
         , ((controlMask, xK_Print), spawn "sleep 0.2; scrot -s")
-        , ((0, xK_Print), spawn "scrot")
+        , ((0, xK_Print), spawn "flameshot gui -p ~/Pictures/Screenshots")
         , ((mod4Mask, xK_d), spawn "rofi -combi-modi window,drun,ssh,run -theme lb -show combi")
         ]
            
@@ -40,3 +40,4 @@ myStartupHook = do
           spawnOnce "trayer --edge top --align right --SetDockType true --SetPartialStrut false --expand true --height 19 --transparent true --alpha 110 --tint 0x000000 --widthtype request"
           spawnOnce "start-pulseaudio-x11"
           spawnOnce "fcitx"
+          spawnOnce "flameshot"
