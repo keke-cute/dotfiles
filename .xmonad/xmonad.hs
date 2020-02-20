@@ -41,3 +41,4 @@ myStartupHook = do
           spawnOnce "start-pulseaudio-x11"
           spawnOnce "fcitx"
           spawnOnce "flameshot"
+          spawnOnce "parcellite"
