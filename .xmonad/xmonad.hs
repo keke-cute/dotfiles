@@ -34,11 +34,10 @@ myConfig = defaultConfig
         ]
            
 myStartupHook = do
+          spawnOnce "trayer --edge top --align right --SetDockType true --SetPartialStrut false --expand true --height 19 --transparent true --alpha 110 --tint 0x000000 --widthtype request"
           spawnOnce "picom"
           spawnOnce "feh --bg-fill ~/Downloads/wall.png"
-          setWMName "LG3D"
-          spawnOnce "trayer --edge top --align right --SetDockType true --SetPartialStrut false --expand true --height 19 --transparent true --alpha 110 --tint 0x000000 --widthtype request"
+          setWMName "LG3D"          
           spawnOnce "start-pulseaudio-x11"
-          spawnOnce "fcitx"
-          spawnOnce "flameshot"
-          spawnOnce "parcellite"
+          spawnOnce "/home/keke/dotfiles/scripts/run.sh"
+
