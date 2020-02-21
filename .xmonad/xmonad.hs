@@ -1,22 +1,18 @@
 import XMonad
 import XMonad.Hooks.DynamicLog
-import XMonad.Util.EZConfig(additionalKeys)
+import XMonad.Util.EZConfig(additionalKeysP)
 import XMonad.Util.SpawnOnce
 import XMonad.Hooks.SetWMName
 import XMonad.Hooks.EwmhDesktops
--- The main function.
+
 main = xmonad =<< statusBar myBar myPP toggleStrutsKey myConfig
 
--- Command to launch the bar.
 myBar = "xmobar"
 
--- Custom PP, configure it as you like. It determines what is being written to the bar.
 myPP = xmobarPP { ppCurrent = xmobarColor "#429942" "" . wrap "<" ">" }
 
--- Key binding to toggle the gap for the bar.
 toggleStrutsKey XConfig {XMonad.modMask = modMask} = (modMask, xK_b)
 
--- Main configuration, override the defaults to your liking.
 myConfig = defaultConfig
            {
              modMask = mod4Mask
@@ -26,11 +22,12 @@ myConfig = defaultConfig
              , focusedBorderColor = "#cd8b00"
              , startupHook = myStartupHook
              , handleEventHook    = fullscreenEventHook
-             } `additionalKeys`   
-        [ ((mod4Mask .|. shiftMask, xK_z), spawn "xscreensaver-command -lock")
-        , ((controlMask, xK_Print), spawn "sleep 0.2; scrot -s")
-        , ((0, xK_Print), spawn "flameshot gui -p ~/Pictures/Screenshots")
-        , ((mod4Mask, xK_d), spawn "rofi -combi-modi window,drun,ssh,run -theme lb -show combi")
+             } `additionalKeysP`   
+        [   ("<XF86AudioRaiseVolume>"  , spawn "pulsemixer --unmute && pulsemixer --change-volume +5")
+          , ("<XF86AudioLowerVolume>"  , spawn "pulsemixer --unmute && pulsemixer --change-volume -5")
+          , ("<XF86AudioMute>"         , spawn "pulsemixer --mute")
+          , ("<Print>"                 , spawn "flameshot gui -p ~/Pictures/Screenshots")
+          , ("M-d"                     , spawn "rofi -show")
         ]
            
 myStartupHook = do
@@ -40,4 +37,3 @@ myStartupHook = do
           setWMName "LG3D"          
           spawnOnce "start-pulseaudio-x11"
           spawnOnce "/home/keke/dotfiles/scripts/run.sh"
-

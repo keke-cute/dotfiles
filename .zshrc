@@ -21,7 +21,7 @@ antigen apply
 export GOPATH="$HOME/go"
 export GO111MODULE=on
 export PATH="$PATH:$HOME/go/bin"
-export TERM=xterm
+#export TERM=xterm
 #补全 
 autoload -U compinit
 zstyle ':completion:*' menu select
