@@ -35,5 +35,5 @@ myStartupHook = do
           spawnOnce "picom"
           spawnOnce "feh --bg-fill ~/Downloads/wall.png"
           setWMName "LG3D"          
-          spawnOnce "start-pulseaudio-x11"
+          --spawnOnce "start-pulseaudio-x11"
           spawnOnce "/home/keke/dotfiles/scripts/run.sh"
