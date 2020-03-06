@@ -13,3 +13,4 @@
 .emacs.d/transient/
 .emacs.d/recentf
 .emacs.d/.lsp-session-v1
+.emacs.d/myemacsconf.el
