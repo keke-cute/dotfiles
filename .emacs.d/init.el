@@ -21,8 +21,8 @@
 
 ;; 加载外部的配置文件
 (require 'packages)
-(require 'pyim)
+;;(require 'pyim)
 (require 'basic)
-(require 'lang)
+;;(require 'lang)
 (require 'run)
 (require 'keybind)

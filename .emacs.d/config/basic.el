@@ -5,9 +5,9 @@
 (global-linum-mode 1)
 (setq inhibit-startup-message t)
 (global-hl-line-mode t)
-(add-to-list 'default-frame-alist'(ns-transparent-titlebar . t))
-(add-to-list 'default-frame-alist'(ns-appearance . dark))
-(add-to-list 'default-frame-alist'(alpha . (80 . 75)))
+;;(add-to-list 'default-frame-alist'(ns-transparent-titlebar . t))
+;;(add-to-list 'default-frame-alist'(ns-appearance . dark))
+;;(add-to-list 'default-frame-alist'(alpha . (80 . 75)))
 
 ;; 自动加载外部修改过的文件
 (global-auto-revert-mode 1)
@@ -20,9 +20,9 @@
 ;; 设置h 文件默认为c++文件
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
 ;; 设置主题
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
-(load-theme 'dracula t)
+;;(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
+;;(load-theme 'dracula t)
 ;; 设置字体
-(set-frame-font "Sarasa Mono SC 14")
+;;(set-frame-font "Sarasa Mono SC 14")
 
 (provide 'basic)
