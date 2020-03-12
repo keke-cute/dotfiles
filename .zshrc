@@ -9,7 +9,7 @@ fi
 
 source ~/antigen.zsh
 antigen use oh-my-zsh
-antigen theme romkatv/powerlevel10k
+antigen theme denysdovhan/spaceship-prompt
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
 antigen apply
@@ -28,25 +28,3 @@ zstyle ':completion:*' menu select
 zmodload zsh/complist
 compinit
 _comp_options+=(globdots)		# Include hidden files.
-
-#别名
-## ls and grep and ps
-alias ls='ls --color=auto'
-alias la='ls -a'
-alias ll='ls -la'
-alias l='ls'
-alias l.="ls -A | egrep '^\.'"
-alias grep='grep --color=auto'
-alias egrep='egrep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias ps="ps auxf"
-alias psgrep="ps aux | grep -v grep | grep -i -e VSZ -e"
-##grub update
-alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
-##poweroff
-alias sp="sudo poweroff"
-alias sr="sudo reboot"
-##git
-alias fp="git add . && git commit -m \"fust push\" && git push"
-##misc
-alias e="emacs -nw"
