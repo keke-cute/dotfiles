@@ -123,6 +123,14 @@
   (use-package ivy-rich
     :init (ivy-rich-mode 1))
 #+end_src
+** xah-math-input
+#+begin_src emacs-lisp
+   (straight-use-package 'xah-math-input)
+#+end_src
+** magit
+   #+BEGIN_SRC emacs-lisp
+   (straight-use-package 'magit)
+   #+END_SRC
 * 键位配置
 #+begin_src emacs-lisp
 (global-set-key (kbd "C-c p") 'keke-run-current-file)
@@ -144,6 +152,10 @@
 (global-set-key (kbd "C-S-o") 'counsel-rhythmbox)
 (define-key minibuffer-local-map (kbd "C-r") 'counsel-minibuffer-history)
 #+end_src
+* Org-mode
+  #+BEGIN_SRC emacs-lisp
+  (add-hook 'org-mode-hook (lambda () (setq truncate-lines nil)))
+  #+END_SRC
 * keke-run-current-file(fork to leexah)
 #+begin_src emacs-lisp
   (defvar keke-run-current-file-before-hook nil "Hook for `keke-run-current-file'. Before the file is run.")
