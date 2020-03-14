@@ -9,7 +9,8 @@ fi
 
 source ~/antigen.zsh
 antigen use oh-my-zsh
-antigen theme denysdovhan/spaceship-prompt
+#antigen theme denysdovhan/spaceship-prompt
+antigen theme romkatv/powerlevel10k
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
 antigen apply
