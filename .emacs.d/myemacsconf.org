@@ -5,7 +5,7 @@
 #+hugo_section: posts
 
 #+options: creator:t author:t
-* last update:<2020-03-12 Thu>
+* last update:<2020-03-14 Sat>
 * 初始化 straight.el 插件管理
 #+begin_src emacs-lisp
   (defvar bootstrap-version)
