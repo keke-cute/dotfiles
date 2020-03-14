@@ -3,7 +3,7 @@
 #@/db_type	userdb
 #@/rime_version	1.5.3
 #@/tick	43
-#@/user_id	keke
+#@/user_id	73217228-8b36-462c-bf9c-25ab9ccc5f7d
 a 	啊	c=2 d=1.88355 t=43
 an sha dang 	暗殺黨	c=1 d=0.839457 t=43
 an zhuang 	安裝	c=1 d=1 t=43
