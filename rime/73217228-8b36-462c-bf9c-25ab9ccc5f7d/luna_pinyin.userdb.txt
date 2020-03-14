@@ -1,0 +1,50 @@
+# Rime user dictionary
+#@/db_name	luna_pinyin.userdb
+#@/db_type	userdb
+#@/rime_version	1.5.3
+#@/tick	42
+#@/user_id	73217228-8b36-462c-bf9c-25ab9ccc5f7d
+a 	啊	c=2 d=1.99005 t=31
+an sha dang 	暗殺黨	c=1 d=0.88692 t=31
+ba 	吧	c=0 d=0.0865023 t=31
+ba ta 	把它	c=1 d=1 t=39
+bu huai 	不壞	c=0 d=0.0927743 t=31
+ce shi 	測試	c=1 d=0.955997 t=31
+de 	的	c=1 d=0.985112 t=31
+deng shan fu 	登山服	c=1 d=0.891366 t=31
+fa 	法	c=1 d=1 t=42
+fan ying 	反應	c=0 d=0.1 t=34
+fu le 	服了	c=1 d=0.873716 t=31
+jian yi 	建議	c=0 d=0.0860708 t=31
+jian yi zhi jie 	建議直接	c=1 d=0.865023 t=31
+jiu 	就	c=1 d=1 t=38
+jiu suan 	就算	c=1 d=0.937067 t=31
+jiu xing 	就行	c=1 d=0.918512 t=31
+ke yi shuo 	可以說	c=0 d=0.0941765 t=31
+le 	了	c=2 d=1.90032 t=36
+mei you 	沒有	c=1 d=0.970446 t=31
+ni 	你	c=3 d=2.82494 t=37
+ni ye 	你也	c=0 d=0.0941765 t=31
+ni ye ke yi shuo 	你也可以說	c=1 d=0.946485 t=31
+qi 	起	c=0 d=0.1 t=34
+qi bu shi 	豈不是	c=1 d=0.904837 t=31
+qi fan ying 	起反應	c=1 d=1 t=35
+reng le 	扔了	c=1 d=1.0827 t=40
+reng le ba 	扔了吧	c=1 d=0.869358 t=31
+shang ban 	上班	c=1 d=0.951229 t=31
+shi 	是	c=2 d=1.97032 t=31
+shou shi 	手勢	c=1 d=0.882497 t=31
+shuai de 	帥的	c=1 d=0.960789 t=31
+shuai de 	摔得	c=2 d=1.956 t=33
+shuai le 	摔了	c=1 d=0.941765 t=31
+tong kuan 	同款	c=1 d=0.878095 t=31
+wan quan 	完全	c=1 d=0.909373 t=31
+yi nian 	一年	c=1 d=0.860708 t=31
+yin xiang 	音箱	c=1 d=1 t=34
+yong 	用	c=1 d=1.08825 t=41
+yong bu huai 	用不壞	c=1 d=0.932394 t=31
+you 	又	c=1 d=0.927743 t=31
+you zen me 	又怎麼	c=1 d=1 t=32
+zhi jie 	直接	c=0 d=0.0860708 t=31
+zhou mo 	週末	c=1 d=0.895834 t=31
+zi yong 	自用	c=1 d=0.913931 t=31
