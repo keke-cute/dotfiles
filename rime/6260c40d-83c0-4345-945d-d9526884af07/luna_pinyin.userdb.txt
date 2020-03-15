@@ -1,0 +1,51 @@
+# Rime user dictionary
+#@/db_name	luna_pinyin.userdb
+#@/db_type	userdb
+#@/rime_version	1.5.3
+#@/tick	43
+#@/user_id	6260c40d-83c0-4345-945d-d9526884af07
+a 	啊	c=2 d=1.88355 t=43
+an sha dang 	暗殺黨	c=1 d=0.839457 t=43
+an zhuang 	安裝	c=1 d=1 t=43
+ba 	吧	c=0 d=0.0818731 t=43
+ba ta 	把它	c=1 d=0.985112 t=43
+bu huai 	不壞	c=0 d=0.0878095 t=43
+ce shi 	測試	c=1 d=0.904837 t=43
+de 	的	c=1 d=0.932394 t=43
+deng shan fu 	登山服	c=1 d=0.843665 t=43
+fa 	法	c=1 d=1 t=43
+fan ying 	反應	c=0 d=0.0960789 t=43
+fu le 	服了	c=1 d=0.826959 t=43
+jian yi 	建議	c=0 d=0.0814647 t=43
+jian yi zhi jie 	建議直接	c=1 d=0.818731 t=43
+jiu 	就	c=1 d=0.980199 t=43
+jiu suan 	就算	c=1 d=0.88692 t=43
+jiu xing 	就行	c=1 d=0.869358 t=43
+ke yi shuo 	可以說	c=0 d=0.0891367 t=43
+le 	了	c=2 d=1.84416 t=43
+mei you 	沒有	c=1 d=0.918513 t=43
+ni 	你	c=3 d=2.75519 t=43
+ni ye 	你也	c=0 d=0.0891367 t=43
+ni ye ke yi shuo 	你也可以說	c=1 d=0.895834 t=43
+qi 	起	c=0 d=0.0960789 t=43
+qi bu shi 	豈不是	c=1 d=0.856415 t=43
+qi fan ying 	起反應	c=1 d=0.965605 t=43
+reng le 	扔了	c=1 d=1.07193 t=43
+reng le ba 	扔了吧	c=1 d=0.822834 t=43
+shang ban 	上班	c=1 d=0.900324 t=43
+shi 	是	c=2 d=1.86488 t=43
+shou shi 	手勢	c=1 d=0.83527 t=43
+shuai de 	帥的	c=1 d=0.909373 t=43
+shuai de 	摔得	c=2 d=1.86993 t=43
+shuai le 	摔了	c=1 d=0.891367 t=43
+tong kuan 	同款	c=1 d=0.831104 t=43
+wan quan 	完全	c=1 d=0.860708 t=43
+yi nian 	一年	c=1 d=0.814647 t=43
+yin xiang 	音箱	c=1 d=0.960789 t=43
+yong 	用	c=1 d=1.08282 t=43
+yong bu huai 	用不壞	c=1 d=0.882497 t=43
+you 	又	c=1 d=0.878095 t=43
+you zen me 	又怎麼	c=1 d=0.951229 t=43
+zhi jie 	直接	c=0 d=0.0814647 t=43
+zhou mo 	週末	c=1 d=0.847894 t=43
+zi yong 	自用	c=1 d=0.865022 t=43
