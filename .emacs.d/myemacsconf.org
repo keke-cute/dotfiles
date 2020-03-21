@@ -5,7 +5,7 @@
 #+hugo_section: posts
 
 #+options: creator:t author:t
-* last update:<2020-03-14 Sat>
+* last update:<2020-03-21 Sat>
 * Preview
 [[https://s1.ax1x.com/2020/03/21/8hgl8O.png]]
 * 初始化 straight.el 插件管理
