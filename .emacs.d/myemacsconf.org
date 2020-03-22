@@ -8,6 +8,7 @@
 * last update:<2020-03-21 Sat>
 * Preview
 [[https://s1.ax1x.com/2020/03/21/8hha36.png]]
+[[https://s1.ax1x.com/2020/03/22/8IESj1.png]]
 * 初始化 straight.el 插件管理
 #+begin_src emacs-lisp
   (defvar bootstrap-version)
