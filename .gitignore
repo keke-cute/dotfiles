@@ -16,3 +16,8 @@
 .emacs.d/myemacsconf.el
 .emacs.d/.DS_Store
 .DS_Store
+st(luke)/st
+st(luke)/st.o
+st(luke)/x.o
+st(luke)/pkg/
+st(luke)/*.pkg.tar.xz
