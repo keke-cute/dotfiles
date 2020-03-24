@@ -32,3 +32,5 @@ _comp_options+=(globdots)		# Include hidden files.
 
 
 alias e="emacs -nw"
+alias luping="ffmpeg -f x11grab -s 1366x768 -r 25 -i $DISPLAY -c:v libx264 -b:v 800k -s 1366x768 test.mp4"
+alias zipai="ffmpeg -f v4l2 -s 640x480 -i /dev/video0 output.mpg"
