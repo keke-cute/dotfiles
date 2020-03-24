@@ -5,7 +5,7 @@
 #+hugo_section: posts
 
 #+options: creator:t author:t
-* last update:<2020-03-21 Sat>
+* last update:<2020-03-24 Tue>
 * Preview
 [[https://s1.ax1x.com/2020/03/21/8hha36.png]]
 [[https://s1.ax1x.com/2020/03/22/8IESj1.png]]
@@ -72,13 +72,16 @@
   ;; 设置h 文件默认为c++文件
   (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
 #+end_src
-** 主题&字体
+** 字体
 #+begin_src emacs-lisp
-  ;; 设置主题
-  ;;(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
-  ;;(load-theme 'dracula t)
   ;; 设置字体
-  (set-frame-font "Operator Mono 16")
+  (cond
+   ((string-equal system-type "darwin")
+    (progn
+      (set-frame-font "Operator Mono 16")))
+   ((string-equal system-type "gnu/linux")
+    (progn
+      (set-frame-font "Operator Mono 12"))))
 #+end_src
 *** doom-modeline
 #+begin_src emacs-lisp
@@ -108,6 +111,10 @@
   ;; Corrects (and improves) org-mode's native fontification.
   (doom-themes-org-config))
 #+END_SRC
+* Org-mode
+  #+BEGIN_SRC emacs-lisp
+  (add-hook 'org-mode-hook (lambda () (setq truncate-lines nil)))
+  #+END_SRC
 * 包的配置
 ** ox-hugo
 #+begin_src emacs-lisp
@@ -217,16 +224,10 @@
 (global-set-key (kbd "C-S-o") 'counsel-rhythmbox)
 (define-key minibuffer-local-map (kbd "C-r") 'counsel-minibuffer-history)
 #+end_src
-* Org-mode
-  #+BEGIN_SRC emacs-lisp
-  (add-hook 'org-mode-hook (lambda () (setq truncate-lines nil)))
-  #+END_SRC
 * keke-run-current-file(fork to leexah)
 #+begin_src emacs-lisp
   (defvar keke-run-current-file-before-hook nil "Hook for `keke-run-current-file'. Before the file is run.")
-
   (defvar keke-run-current-file-after-hook nil "Hook for `keke-run-current-file'. After the file is run.")
-
   (defun keke-run-current-file ()
     (interactive)
     (let (
