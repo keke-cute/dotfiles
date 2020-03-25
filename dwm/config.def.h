@@ -69,15 +69,20 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
-//static const char *rofi[] = { "rofi", "-combi-modi", "window,drun,ssh,run", "-theme", "solarized", "-show", "combi", NULL };
-static const char *termcmd[]  = { "st", NULL };
-static const char *flameshot[]  = { "flameshot", "gui", NULL };
+static const char *dmenucmd[]  = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
+static const char *termcmd[]   = { "st", NULL };
+static const char *flameshot[] = { "/home/keke/dotfiles/scripts/flameshot.sh", NULL };
+static const char *upvol[]     = { "/home/keke/dotfiles/scripts/upvol.sh", NULL };
+static const char *downvol[]   = { "/home/keke/dotfiles/scripts/downvol.sh", NULL };
+static const char *mutevol[]   = { "/home/keke/dotfiles/scripts/mute.sh", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_space,  spawn,          {.v = dmenucmd } },
-	{ MODKEY,                       XK_Print,  spawn,          {.v = flameshot } },
+	{ 0,                            0x1008ff11,spawn,          {.v = downvol } },
+	{ 0,                            0x1008ff12,spawn,          {.v = mutevol } },
+	{ 0,                            0x1008ff13,spawn,          {.v = upvol   } },	
+	{ 0,                            XK_Print,  spawn,          {.v = flameshot } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
