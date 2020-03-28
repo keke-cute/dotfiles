@@ -15,6 +15,10 @@
 .emacs.d/.lsp-session-v1
 .emacs.d/myemacsconf.el
 .emacs.d/.DS_Store
+.emacs.d/rime/build
+.emacs.d/rime/user.yaml
+.emacs.d/rime/installation.yaml
+.emacs.d/rime/luna_pinyin.userdb
 .DS_Store
 st/st
 st/st.o
