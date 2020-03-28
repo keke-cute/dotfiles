@@ -9,6 +9,11 @@
 * Preview
 [[https://s1.ax1x.com/2020/03/21/8hha36.png]]
 [[https://s1.ax1x.com/2020/03/22/8IESj1.png]]
+* Is A?
+  #+BEGIN_SRC emacs-lisp
+    (defconst *is-a-mac* (eq system-type 'darwin))
+    (defconst *is-a-linux* (eq system-type 'gnu/linux))
+  #+END_SRC
 * 初始化 straight.el 插件管理
 #+begin_src emacs-lisp
   (defvar bootstrap-version)
@@ -74,14 +79,10 @@
 #+end_src
 ** 字体
 #+begin_src emacs-lisp
-  ;; 设置字体
-  (cond
-   ((string-equal system-type "darwin")
-    (progn
-      (set-frame-font "Operator Mono 16")))
-   ((string-equal system-type "gnu/linux")
-    (progn
-      (set-frame-font "Operator Mono 12"))))
+  (when *is-a-mac*
+    (set-frame-font "Operator Mono 16"))
+  (when *is-a-linux*
+    (set-frame-font "Operator Mono 12"))
 #+end_src
 *** doom-modeline
 #+begin_src emacs-lisp
@@ -164,7 +165,9 @@
 		       :repo "DogLooksGood/emacs-rime"
 		       :files ("rime.el" "Makefile" "lib.c"))
        :custom
-       (default-input-method "rime"))
+       (default-input-method "rime")
+       (when *is-a-mac*
+	 (rime-librime-root "~/.emacs.d/librime/dist")))
    #+END_SRC
 * 键位配置
 #+begin_src emacs-lisp
