@@ -3,7 +3,7 @@ __build_info:
   timestamps:
     default: 1585188222
     default.custom: 1584905418
-    double_pinyin_flypy.custom: 0
+    double_pinyin_flypy.custom: 1585386144
     double_pinyin_flypy.schema: 1584905418
 engine:
   filters:
@@ -204,9 +204,8 @@ switches:
   - name: full_shape
     states: ["半角", "全角"]
   - name: simplification
+    reset: 1
     states: ["漢字", "汉字"]
-  - name: ascii_punct
-    states: ["。，", "．，"]
 translator:
   dictionary: luna_pinyin
   preedit_format:
