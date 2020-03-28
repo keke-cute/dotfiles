@@ -160,14 +160,17 @@
 ** rime
    #+BEGIN_SRC emacs-lisp
      (use-package rime
-       :straight (rime :type git
-		       :host github
-		       :repo "DogLooksGood/emacs-rime"
-		       :files ("rime.el" "Makefile" "lib.c"))
-       :custom
-       (default-input-method "rime")
-       (when *is-a-mac*
-	 (rime-librime-root "~/.emacs.d/librime/dist")))
+		  :straight (rime :type git
+				  :host github
+				  :repo "DogLooksGood/emacs-rime"
+				  :files ("rime.el" "Makefile" "lib.c"))
+		  :custom
+		  (rime-show-candidate 'posframe)
+		  (default-input-method "rime"))
+     (when *is-a-mac*
+       (use-package rime
+		    :custom
+		    (rime-librime-root "~/.emacs.d/librime/dist")))
    #+END_SRC
 * 键位配置
 #+begin_src emacs-lisp
