@@ -31,10 +31,8 @@
 #+end_src
 * 预下载基础包
 #+begin_src emacs-lisp
-  (add-to-list 'load-path "~/.emacs.d/el/")
   (straight-use-package 'use-package)
   (straight-use-package 'posframe)
-  (straight-use-package 'company)
 #+end_src
 * 载入启动界面
   #+BEGIN_SRC emacs-lisp
