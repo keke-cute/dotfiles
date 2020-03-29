@@ -35,7 +35,6 @@
   (straight-use-package 'use-package)
   (straight-use-package 'posframe)
   (straight-use-package 'company)
-  (require 'jsonrpc)
 #+end_src
 * 载入启动界面
   #+BEGIN_SRC emacs-lisp
