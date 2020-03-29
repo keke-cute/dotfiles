@@ -5,7 +5,7 @@
 #+hugo_section: posts
 
 #+options: creator:t author:t
-* last update:<2020-03-24 Tue>
+* last update:<2020-03-29 Sun>
 * Preview
 [[https://s1.ax1x.com/2020/03/21/8hha36.png]]
 [[https://s1.ax1x.com/2020/03/22/8IESj1.png]]
@@ -31,8 +31,10 @@
 #+end_src
 * 预下载基础包
 #+begin_src emacs-lisp
+  (add-to-list 'load-path "~/.emacs.d/el/")
   (straight-use-package 'use-package)
   (straight-use-package 'posframe)
+  (straight-use-package 'company)
 #+end_src
 * 载入启动界面
   #+BEGIN_SRC emacs-lisp
@@ -171,6 +173,30 @@
        (use-package rime
 		    :custom
 		    (rime-librime-root "~/.emacs.d/librime/dist")))
+   #+END_SRC
+** nox
+   #+BEGIN_SRC emacs-lisp
+     (require 'nox)
+
+     (dolist (hook (list
+		    'js-mode-hook
+		    'rust-mode-hook
+		    'python-mode-hook
+		    'ruby-mode-hook
+		    'java-mode-hook
+		    'sh-mode-hook
+		    'php-mode-hook
+		    'c-mode-common-hook
+		    'c-mode-hook
+		    'c++-mode-hook
+		    'haskell-mode-hook
+		    ))
+       (add-hook hook '(lambda () (nox-ensure))))
+
+   #+END_SRC
+** company
+   #+BEGIN_SRC emacs-lisp
+     (add-hook 'after-init-hook 'global-company-mode)
    #+END_SRC
 * 键位配置
 #+begin_src emacs-lisp
