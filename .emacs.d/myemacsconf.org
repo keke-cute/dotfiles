@@ -5,7 +5,7 @@
 #+hugo_section: posts
 
 #+options: creator:t author:t
-* last update:<2020-03-29 Sun>
+* last update:<2020-04-05 Sun>
 * Preview
 [[https://s1.ax1x.com/2020/03/29/GVOav9.png]]
 [[https://s1.ax1x.com/2020/03/29/GVON34.png]]
@@ -95,25 +95,25 @@
 #+end_src
 *** doom-themes
 #+BEGIN_SRC emacs-lisp
-(straight-use-package 'doom-themes)
-(use-package doom-themes
-  :config
-  ;; Global settings (defaults)
-  (setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
-        doom-themes-enable-italic t) ; if nil, italics is universally disabled
-  (load-theme 'doom-dracula t)
+  (straight-use-package 'doom-themes)
+  (use-package doom-themes
+    :config
+    ;; Global settings (defaults)
+    (setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
+	  doom-themes-enable-italic t) ; if nil, italics is universally disabled
+    (load-theme 'doom-monokai-classic t)
 
-  ;; Enable flashing mode-line on errors
-  (doom-themes-visual-bell-config)
+    ;; Enable flashing mode-line on errors
+    (doom-themes-visual-bell-config)
   
-  ;; Enable custom neotree theme (all-the-icons must be installed!)
-  (doom-themes-neotree-config)
-  ;; or for treemacs users
-  (setq doom-themes-treemacs-theme "doom-colors") ; use the colorful treemacs theme
-  (doom-themes-treemacs-config)
+    ;; Enable custom neotree theme (all-the-icons must be installed!)
+    (doom-themes-neotree-config)
+    ;; or for treemacs users
+    (setq doom-themes-treemacs-theme "doom-colors") ; use the colorful treemacs theme
+    (doom-themes-treemacs-config)
   
-  ;; Corrects (and improves) org-mode's native fontification.
-  (doom-themes-org-config))
+    ;; Corrects (and improves) org-mode's native fontification.
+    (doom-themes-org-config))
 #+END_SRC
 * Org-mode
   #+BEGIN_SRC emacs-lisp
@@ -220,35 +220,76 @@
 (global-set-key (kbd "C-S-o") 'counsel-rhythmbox)
 (define-key minibuffer-local-map (kbd "C-r") 'counsel-minibuffer-history)
 #+end_src
-* keke-run-current-file(fork to leexah)
-#+begin_src emacs-lisp
-  (defvar keke-run-current-file-before-hook nil "Hook for `keke-run-current-file'. Before the file is run.")
-  (defvar keke-run-current-file-after-hook nil "Hook for `keke-run-current-file'. After the file is run.")
-  (defun keke-run-current-file ()
-    (interactive)
-    (let (
-	  ($outputb "*keke-run output*")
-	  (resize-mini-windows nil)
-	  ($suffix-map
-	   `(
-	     ("ts" . "node")
-	     ("html" . "firefox-bin")
-	     ))
-	     $fname
-	     $fSuffix
-	     $prog-name
-	     $cmd-str)
-	   (when (not (buffer-file-name)) (save-buffer))
-	   (when (buffer-modified-p) (save-buffer))
-	   (setq $fname (buffer-file-name))
-	   (setq $fSuffix (file-name-extension $fname))
-	   (setq $prog-name (cdr (assoc $fSuffix $suffix-map)))
-	   (setq $cmd-str (concat $prog-name " \""   $fname "\" &"))
-	   (run-hooks 'keke-run-current-file-before-hook)
-	   (if $prog-name
-	       (progn
-		 (message "Running")
-		 (shell-command $cmd-str $outputb ))
-	     (error "No recognized program file suffix for this file."))))
-  (run-hooks 'keke-run-current-file-after-hook)
-#+end_src
+* 一些好用的函数
+** keke-run-current-file
+   #+BEGIN_SRC emacs-lisp
+     (defvar keke-run-current-file-before-hook nil "Hook for `keke-run-current-file'. Before the file is run.")
+     (defvar keke-run-current-file-after-hook nil "Hook for `keke-run-current-file'. After the file is run.")
+     (defun keke-run-current-file ()
+       (interactive)
+       (let (
+	     ($outputb "*keke-run output*")
+	     (resize-mini-windows nil)
+	     ($suffix-map
+	      `(
+		("ts" . "node")
+		("html" . "firefox-bin")
+		))
+		$fname
+		$fSuffix
+		$prog-name
+		$cmd-str)
+	      (when (not (buffer-file-name)) (save-buffer))
+	      (when (buffer-modified-p) (save-buffer))
+	      (setq $fname (buffer-file-name))
+	      (setq $fSuffix (file-name-extension $fname))
+	      (setq $prog-name (cdr (assoc $fSuffix $suffix-map)))
+	      (setq $cmd-str (concat $prog-name " \""   $fname "\" &"))
+	      (run-hooks 'keke-run-current-file-before-hook)
+	      (if $prog-name
+		  (progn
+		    (message "Running")
+		    (shell-command $cmd-str $outputb ))
+		(error "No recognized program file suffix for this file."))))
+     (run-hooks 'keke-run-current-file-after-hook)
+
+   #+END_SRC
+** keke-html-open-in-chrome-browser
+   #+BEGIN_SRC emacs-lisp
+     (defun keke-html-open-in-chrome-browser ()
+       "Open the current file or `dired' marked files in Google Chrome browser.
+     Work in Windows, macOS, linux.
+     URL `http://ergoemacs.org/emacs/emacs_dired_open_file_in_ext_apps.html'
+     Version 2019-11-10"
+       (interactive)
+       (let* (
+	      ($file-list
+	       (if (string-equal major-mode "dired-mode")
+		   (dired-get-marked-files)
+		 (list (buffer-file-name))))
+	      ($do-it-p (if (<= (length $file-list) 5)
+			    t
+			  (y-or-n-p "Open more than 5 files? "))))
+	 (when $do-it-p
+	   (cond
+	    ((string-equal system-type "darwin")
+	     (mapc
+	      (lambda ($fpath)
+		(shell-command
+		 (format "open -a /Applications/Google\\ Chrome.app \"%s\"" $fpath)))
+	      $file-list))
+	    ((string-equal system-type "windows-nt")
+	     ;; "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" 2019-11-09
+	     (let ((process-connection-type nil))
+	       (mapc
+		(lambda ($fpath)
+		  (start-process "" nil "powershell" "start-process" "chrome" $fpath ))
+		$file-list)))
+	    ((string-equal system-type "gnu/linux")
+	     (mapc
+	      (lambda ($fpath)
+		(shell-command (format "google-chrome-stable \"%s\"" $fpath)))
+	      $file-list))))))
+
+
+   #+END_SRC
