@@ -39,17 +39,17 @@
 #+end_src
 * 载入启动界面
   #+BEGIN_SRC emacs-lisp
-  (straight-use-package 'dashboard)
-  (use-package dashboard
-    :config
-    (dashboard-setup-startup-hook)
-    (setq dashboard-banner-logo-title ";;; Happy Hacking Keke , Emacs Love You ~")
-    (setq dashboard-startup-banner "~/.emacs.d/logo.png")
-    (setq dashboard-set-heading-icons t)
-    (setq dashboard-items '((recents  . 5)
-                          (agenda . 5)))
-    (setq dashboard-set-file-icons t))
-  
+    (straight-use-package 'dashboard)
+    (use-package dashboard
+      :config
+      (dashboard-setup-startup-hook)
+      (setq dashboard-banner-logo-title ";;; Happy Hacking Keke , Emacs Love You ~")
+    ;;  (setq dashboard-startup-banner "~/.emacs.d/logo.png")
+      (setq dashboard-set-heading-icons t)
+      (setq dashboard-items '((recents  . 5)
+			    (agenda . 5)))
+      (setq dashboard-set-file-icons t))
+
   #+END_SRC
 * 主程序的一些设置
 ** UI
