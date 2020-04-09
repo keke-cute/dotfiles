@@ -22,7 +22,7 @@
 **** Zsh
      Use antigen.zsh
 *** WM
-    Xmonad
+    Stumpwm
 *** TERMINAL
     St
 *** FILEMANAGER
