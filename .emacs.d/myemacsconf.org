@@ -85,7 +85,7 @@
   (when *is-a-mac*
     (set-frame-font "Operator Mono 16"))
   (when *is-a-linux*
-    (set-frame-font "Operator Mono 12"))
+    (set-frame-font "Operator Mono Book 12"))
 #+end_src
 *** doom-modeline
 #+begin_src emacs-lisp
