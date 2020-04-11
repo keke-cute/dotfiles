@@ -5,14 +5,14 @@ from xkeysnail.transform import *
 # [Global modemap] Change modifier keys as in xmodmap
 define_modmap({
     Key.CAPSLOCK: Key.LEFT_CTRL,
-    Key.MUHENKAN: Key.RIGHT_CTRL,
+    Key.MUHENKAN: Key.LEFT_CTRL,
     Key.HENKAN: Key.LEFT_SHIFT
 })
 
 # [Conditional modmap] Change modifier keys in certain applications
 define_conditional_modmap(re.compile(r'Emacs'), {
     Key.RIGHT_CTRL: Key.ESC,
-    Key.MUHENKAN: Key.RIGHT_CTRL,
+    Key.MUHENKAN: Key.LEFT_CTRL,
     Key.HENKAN: Key.LEFT_SHIFT
 })
 
