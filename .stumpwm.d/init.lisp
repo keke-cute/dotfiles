@@ -1,6 +1,6 @@
-(run-shell-command "feh --bg-fill ~/Downloads/wall.jpg")
-(run-shell-command "start-pulseaudio-x11")
-(run-shell-command "fcitx5")
+;;(run-shell-command "feh --bg-fill ~/Downloads/wall.jpg")
+;;(run-shell-command "start-pulseaudio-x11")
+;;(run-shell-command "fcitx5")
 
 (defparameter *terminal* "st")
 (defparameter *terminal-class* "st")
@@ -20,5 +20,5 @@
 (defkeys *root-map*
   '(    ("c" "terminal")))
 
-(load-module "stumptray")
-(stumptray::stumptray)
+;;(load-module "stumptray")
+;;(stumptray::stumptray)
