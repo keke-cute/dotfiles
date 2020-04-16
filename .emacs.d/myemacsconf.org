@@ -5,7 +5,7 @@
 #+hugo_section: posts
 
 #+options: creator:t author:t
-* last update:<2020-04-05 Sun>
+* last update:<2020-04-16 Thu>
 * Preview
 [[https://s1.ax1x.com/2020/03/29/GVOav9.png]]
 [[https://s1.ax1x.com/2020/03/29/GVON34.png]]
@@ -82,10 +82,10 @@
 #+end_src
 ** 字体
 #+begin_src emacs-lisp
-  (when *is-a-mac*
+    (when *is-a-mac*
     (set-frame-font "Operator Mono 16"))
-  (when *is-a-linux*
-    (set-frame-font "Operator Mono Book 12"))
+    (when *is-a-linux*
+      (set-frame-font "Operator Mono Light 10"))
 #+end_src
 *** doom-modeline
 #+begin_src emacs-lisp
