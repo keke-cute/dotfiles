@@ -1,37 +1,14 @@
 * My DotFiles
-** ScreenShot
-   [[./screenshot.png]]
-** Details
-*** ST rebuild
-**** DONE PATCH:
-     alpha [[https://st.suckless.org/patches/alpha/]]
-     
-     anysize https://st.suckless.org/patches/anysize/
+  [[./screenshot.png]]
+  #+BEGIN_SRC emacs-lisp
+    ;;
+    ;;   _        _        _           _       _    __ _ _           
+    ;;  | |      | |      ( )         | |     | |  / _(_) |          
+    ;;  | | _____| | _____|/ ___    __| | ___ | |_| |_ _| | ___  ___ 
+    ;;  | |/ / _ \ |/ / _ \ / __|  / _` |/ _ \| __|  _| | |/ _ \/ __|
+    ;;  |   <  __/   <  __/ \__ \ | (_| | (_) | |_| | | | |  __/\__ \
+    ;;  |_|\_\___|_|\_\___| |___/  \__,_|\___/ \__|_| |_|_|\___||___/
+    ;;
 
-     nordtheme [[https://st.suckless.org/patches/nordtheme/]]
-*** DWM rebuild
-**** DONE PATCH:
-     alpha https://dwm.suckless.org/patches/alpha/
-     
-     vanitygaps https://dwm.suckless.org/patches/vanitygaps/
-     
-     awesomebar https://dwm.suckless.org/patches/awesomebar/
-*** OS
-    Gentoo Linux
-*** SHEEL
-**** Zsh
-     Use antigen.zsh
-*** WM
-    Stumpwm
-*** TERMINAL
-    St
-*** FILEMANAGER
-    Ranger
-*** EDITOR
-    Emacs (https://github.com/keke-cute/.emacs.d)
-*** BROWSER
-    Qutebrowser
-*** LAUCH
-    Rofi
-*** IMGVIEW
-    Sxiv
+
+  #+END_SRC
