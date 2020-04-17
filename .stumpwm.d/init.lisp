@@ -48,6 +48,7 @@
 (run-shell-command "start-pulseaudio-x11")
 (run-shell-command "fcitx5")
 (run-shell-command "picom")
+(run-shell-command "st")
 ;;terminal
 (defparameter *terminal* "st")
 (defparameter *terminal-class* "st")

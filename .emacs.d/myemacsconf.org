@@ -1,11 +1,9 @@
 #+title: 我的Emacs配置
 #+author: keke
-#+date: <2020-03-06 Fri>
-#+hugo_base_dir: ~/blog
-#+hugo_section: posts
-
+#+email: liushike1997@gmail.com
+#+date: <2020-04-17 Fri>
+#+export_file_name: ~/keke-cute.github.io/blog/myemacsconf.html
 #+options: creator:t author:t
-* last update:<2020-04-16 Thu>
 * Preview
 [[https://s1.ax1x.com/2020/03/29/GVOav9.png]]
 [[https://s1.ax1x.com/2020/03/29/GVON34.png]]
@@ -288,7 +286,7 @@
 	    ((string-equal system-type "gnu/linux")
 	     (mapc
 	      (lambda ($fpath)
-		(shell-command (format "google-chrome-stable \"%s\"" $fpath)))
+		(shell-command (format "qutebrowser \"%s\"" $fpath)))
 	      $file-list))))))
 
 
