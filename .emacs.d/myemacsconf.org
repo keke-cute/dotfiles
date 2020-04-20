@@ -80,10 +80,15 @@
 #+end_src
 ** 字体
 #+begin_src emacs-lisp
-    (when *is-a-mac*
-    (set-frame-font "Operator Mono 16"))
-    (when *is-a-linux*
-      (set-frame-font "Operator Mono Light 10"))
+  (when *is-a-mac*
+  (set-frame-font "Operator Mono 16"))
+  (when *is-a-linux*
+    (set-frame-font "Operator Mono Light 10"))
+  (if (version< "27.0" emacs-version)
+	     (set-fontset-font
+	      "fontset-default" 'unicode "Noto Color Emoji" nil 'prepend)
+	   (set-fontset-font
+	    t 'symbol (font-spec :family "Noto Color Emoji") nil 'prepend))
 #+end_src
 *** doom-modeline
 #+begin_src emacs-lisp
