@@ -6,14 +6,16 @@ from xkeysnail.transform import *
 define_modmap({
     Key.CAPSLOCK: Key.LEFT_CTRL,
     Key.MUHENKAN: Key.LEFT_CTRL,
-    Key.HENKAN: Key.LEFT_SHIFT
+    Key.HENKAN: Key.LEFT_SHIFT,
+    Key.KATAKANAHIRAGANA: Key.BACKSPACE
 })
 
 # [Conditional modmap] Change modifier keys in certain applications
 define_conditional_modmap(re.compile(r'Emacs'), {
     Key.RIGHT_CTRL: Key.ESC,
     Key.MUHENKAN: Key.LEFT_CTRL,
-    Key.HENKAN: Key.LEFT_SHIFT
+    Key.HENKAN: Key.LEFT_SHIFT,
+    Key.KATAKANAHIRAGANA: Key.BACKSPACE
 })
 
 # [Multipurpose modmap] Give a key two meanings. A normal key when pressed and

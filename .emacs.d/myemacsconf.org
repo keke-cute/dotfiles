@@ -123,12 +123,6 @@
   (add-hook 'org-mode-hook (lambda () (setq truncate-lines nil)))
   #+END_SRC
 * 包的配置
-** ox-hugo
-#+begin_src emacs-lisp
-  (straight-use-package 'ox-hugo)
-  (use-package ox-hugo
-    :after ox)
-#+end_src
 ** yasnippet
 #+begin_src emacs-lisp
   (straight-use-package 'yasnippet)
@@ -154,10 +148,6 @@
     :init (all-the-icons-ivy-rich-mode 1))
   (use-package ivy-rich
     :init (ivy-rich-mode 1))
-#+end_src
-** xah-math-input
-#+begin_src emacs-lisp
-   (straight-use-package 'xah-math-input)
 #+end_src
 ** magit
    #+BEGIN_SRC emacs-lisp
