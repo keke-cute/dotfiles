@@ -44,11 +44,11 @@
 (my/update-color-map (current-screen))
 
 ;;commands
-(run-shell-command "feh --bg-fill ~/Downloads/wall.jpg")
-(run-shell-command "start-pulseaudio-x11")
-(run-shell-command "fcitx5")
-(run-shell-command "picom")
-(run-shell-command "st")
+;;(run-shell-command "feh --bg-fill ~/Downloads/wall.jpg")
+;;(run-shell-command "start-pulseaudio-x11")
+;;(run-shell-command "fcitx5")
+;;(run-shell-command "picom")
+;;(run-shell-command "st")
 ;;terminal
 (defparameter *terminal* "st")
 (defparameter *terminal-class* "st")
