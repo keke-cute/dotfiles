@@ -13,12 +13,12 @@
 
 (setf *mouse-focus-policy* :click)
 (setf *mode-line-timeout* 1)
-(setf *window-border-style* :none)
+;;(setf *window-border-style* :tight)
 (setf *window-format* "%m%n%s%c")
 (setf *resize-increment* 30)
-(setf *maxsize-border-width*   0
-      *transient-border-width* 0
-      *normal-border-width*    0)
+;;(setf *maxsize-border-width*   2
+;;      *transient-border-width* 2
+;;      *normal-border-width*    2)
 
 ;; color-scheme
 (defparameter white   "#b3b1ad")
@@ -56,9 +56,10 @@
   (run-shell-command *terminal*))
 
 ;;modeline
+(load-module "mpd")
 (stumpwm:toggle-mode-line (stumpwm:current-screen)
                           (stumpwm:current-head))
-(setf *screen-mode-line-format* "%n %W %d")
+(setf *screen-mode-line-format* "%n %W %m %d")
 (load-module "stumptray")
 (when *initializing*
   (grename "Main")
