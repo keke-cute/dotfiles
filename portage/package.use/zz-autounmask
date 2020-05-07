@@ -1,0 +1,64 @@
+# FUCK THE FIRMWARE !!!
+sys-kernel/genkernel -firmware
+
+# USE THE LUKS !!!
+sys-boot/grub device-mapper
+
+# NEED ZIPAI LUPING
+media-video/ffmpeg x264 v4l X
+
+# EMACS LOVE U
+app-editors/emacs X xft png imagemagick dynamic-loading
+app-emacs/emacs-common-gentoo X
+
+#I LOVE EMOJI
+media-libs/freetype png
+
+# DWM&ST
+x11-wm/dwm savedconfig xinerama
+x11-terms/st savedconfig 
+
+# package.use# required by x11-libs/gtk+-3.24.20::gentoo
+# required by x11-themes/adwaita-icon-theme-3.32.0::gentoo
+# required by x11-libs/gtk+-2.24.32-r1::gentoo
+# required by x11-themes/gtk-engines-adwaita-3.28::gentoo
+>=x11-libs/cairo-1.16.0-r3 X
+# required by media-libs/mesa-20.0.6::gentoo[libglvnd]
+# required by media-libs/libepoxy-1.5.4::gentoo[egl]
+# required by x11-libs/gtk+-3.24.20::gentoo
+# required by x11-themes/adwaita-icon-theme-3.32.0::gentoo
+# required by x11-libs/gtk+-2.24.32-r1::gentoo
+# required by x11-themes/gtk-engines-adwaita-3.28::gentoo
+>=media-libs/libglvnd-1.3.1 X
+# required by sys-auth/consolekit-1.2.1::gentoo
+# required by consolekit (argument)
+>=dev-libs/glib-2.64.2 dbus
+# required by dev-qt/qtgui-5.14.2::gentoo[X]
+# required by dev-qt/qtwidgets-5.14.2::gentoo
+# required by games-action/multimc5-0.6.11::jorgicio
+# required by multimc5 (argument)
+>=x11-libs/libxkbcommon-0.10.0 X
+# required by dev-qt/qtwidgets-5.14.2::gentoo[gtk]
+# required by games-action/multimc5-0.6.11::jorgicio
+# required by multimc5 (argument)
+>=dev-qt/qtgui-5.14.2 dbus
+# required by dev-qt/qtcore-5.14.2::gentoo
+# required by dev-qt/qtwidgets-5.14.2::gentoo
+# required by games-action/multimc5-0.6.11::jorgicio
+# required by multimc5 (argument)
+>=dev-libs/libpcre2-10.34 pcre16
+# required by www-client/firefox-76.0::gentoo
+# required by firefox (argument)
+>=media-libs/libpng-1.6.37 apng
+# required by www-client/firefox-76.0::gentoo[system-libvpx]
+# required by firefox (argument)
+>=media-libs/libvpx-1.8.2 postproc
+# required by www-client/firefox-76.0::gentoo
+# required by firefox (argument)
+>=dev-lang/python-2.7.18:2.7 sqlite
+# required by www-client/firefox-76.0::gentoo
+# required by firefox (argument)
+>=dev-lang/python-3.8.2-r2:3.8 sqlite
+# required by app-emulation/virt-manager-2.2.1-r3::gentoo[gtk]
+# required by app-emulation/virt-manager (argument)
+>=net-misc/spice-gtk-0.38 usbredir

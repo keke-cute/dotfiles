@@ -1,0 +1,2 @@
+=app-i18n/man-pages-zh_CN-9999
+>=sys-fs/fuse-3.0
