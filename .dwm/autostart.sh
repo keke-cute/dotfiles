@@ -1,3 +1,4 @@
+exec sh /home/keke/dotfiles/scripts/xsetloop.sh &
 exec picom &
 exec start-pulseaudio-x11 &
 exec flameshot &

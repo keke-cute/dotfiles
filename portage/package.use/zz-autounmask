@@ -19,9 +19,14 @@ x11-wm/dwm savedconfig xinerama
 x11-terms/st savedconfig 
 
 # QEMU~
-app-emulation/qemu usbredir sdl spice
+app-emulation/qemu usbredir sdl spice opengl virgl
 app-emulation/libvirt virt-network
 net-misc/remmina rdp
+
+# Feeluodm
+dev-python/PyQt5 dbus gui opengl widgets
+
+www-client/w3m imlib unicode
 # package.use# required by x11-libs/gtk+-3.24.20::gentoo
 # required by x11-themes/adwaita-icon-theme-3.32.0::gentoo
 # required by x11-libs/gtk+-2.24.32-r1::gentoo
@@ -202,3 +207,6 @@ net-misc/remmina rdp
 # required by app-emulation/libvirt-6.2.0-r2::gentoo[virt-network]
 # required by libvirt (argument)
 >=net-dns/dnsmasq-2.81 script
+# required by media-sound/feeluown-3.4.1::gentoo-zh
+# required by dev-python/fuo-xiami-0.2.3::gentoo-zh
+>=media-video/mpv-0.32.0-r1 libmpv
