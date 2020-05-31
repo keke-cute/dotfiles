@@ -33,10 +33,12 @@
 #+end_src
 * 预下载基础包
 #+begin_src emacs-lisp
+  (add-to-list 'load-path "~/.emacs.d/emacs-lisp/")
   (straight-use-package 'use-package)
   (straight-use-package 'posframe)
   (straight-use-package 'vterm)
   (straight-use-package 'htmlize)
+  (straight-use-package 'company)
 #+end_src
 * 载入启动界面
   #+BEGIN_SRC emacs-lisp
@@ -167,6 +169,25 @@
 		    :custom
 		    (rime-librime-root "~/.emacs.d/librime/dist")))
    #+END_SRC
+** nox
+   #+BEGIN_SRC emacs-lisp
+     (require 'nox)
+
+     (dolist (hook (list
+		    'js-mode-hook
+		    'rust-mode-hook
+		    'python-mode-hook
+		    'ruby-mode-hook
+		    'java-mode-hook
+		    'sh-mode-hook
+		    'php-mode-hook
+		    'c-mode-common-hook
+		    'c-mode-hook
+		    'c++-mode-hook
+		    'haskell-mode-hook
+		    ))
+       (add-hook hook '(lambda () (nox-ensure))))
+   #+END_SRC
 * Org-mode
   #+BEGIN_SRC emacs-lisp
     (add-hook 'org-mode-hook (lambda () (setq truncate-lines nil)))
@@ -205,7 +226,8 @@
 	     ($suffix-map
 	      `(
 		("ts" . "node")
-		("html" . "firefox-bin")
+		("py" . "python")
+		("html" . "firefox")
 		))
 		$fname
 		$fSuffix
@@ -224,7 +246,6 @@
 		    (shell-command $cmd-str $outputb ))
 		(error "No recognized program file suffix for this file."))))
      (run-hooks 'keke-run-current-file-after-hook)
-
    #+END_SRC
 ** keke-html-open-in-chrome-browser
    #+BEGIN_SRC emacs-lisp
@@ -262,6 +283,4 @@
 	      (lambda ($fpath)
 		(shell-command (format "qutebrowser \"%s\"" $fpath)))
 	      $file-list))))))
-
-
    #+END_SRC

@@ -1,11 +1,12 @@
 ;;; jsonrpc.el --- JSON-RPC library                  -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2018-2020 Free Software Foundation, Inc.
+;; Copyright (C) 2018-2019 Free Software Foundation, Inc.
 
-;; Author: João Távora <joaotavora@gmail.com>
+;; Author: JoÃ£o TÃ¡vora <joaotavora@gmail.com>
+;; Maintainer: JoÃ£o TÃ¡vora <joaotavora@gmail.com>
 ;; Keywords: processes, languages, extensions
 ;; Package-Requires: ((emacs "25.2"))
-;; Version: 1.0.9
+;; Version: 1.0.7
 
 ;; This is an Elpa :core package.  Don't use functionality that is not
 ;; compatible with Emacs 25.2.
@@ -42,7 +43,8 @@
 (eval-when-compile (require 'subr-x))
 (require 'warnings)
 (require 'pcase)
-(require 'ert) ; to escape a `condition-case-unless-debug'
+(require 'ert)             ; to escape a `condition-case-unless-debug'
+(require 'array)           ; xor
 
 
 ;;; Public API
@@ -107,7 +109,7 @@ notifications.  CONN, METHOD and PARAMS are the same as in
 ;;; API mandatory
 (cl-defgeneric jsonrpc-connection-send (conn &key id method params result error)
   "Send a JSONRPC message to connection CONN.
-ID, METHOD, PARAMS, RESULT and ERROR.")
+ID, METHOD, PARAMS, RESULT and ERROR. ")
 
 ;;; API optional
 (cl-defgeneric jsonrpc-shutdown (conn)
@@ -126,7 +128,7 @@ WHAT is whatever was passed the as the value to that argument.
 
 By default, all connections are ready for sending all requests
 immediately."
-  (:method (_s _what)   ;; by default all connections are ready
+  (:method (_s _what) ;; by default all connections are ready
            t))
 
 
@@ -292,11 +294,11 @@ ignored."
                                   (throw tag `(done ,result))))
                   :error-fn
                   (jsonrpc-lambda
-                      (&key code message data)
-                    (unless cancelled
-                      (throw tag `(error (jsonrpc-error-code . ,code)
-                                         (jsonrpc-error-message . ,message)
-                                         (jsonrpc-error-data . ,data)))))
+                   (&key code message data)
+                   (unless cancelled
+                     (throw tag `(error (jsonrpc-error-code . ,code)
+                                        (jsonrpc-error-message . ,message)
+                                        (jsonrpc-error-data . ,data)))))
                   :timeout-fn
                   (lambda ()
                     (unless cancelled
@@ -343,7 +345,7 @@ ignored."
     :documentation "Process object wrapped by the this connection.")
    (-expected-bytes
     :accessor jsonrpc--expected-bytes
-    :documentation "How many bytes declared by server.")
+    :documentation "How many bytes declared by server")
    (-on-shutdown
     :accessor jsonrpc--on-shutdown
     :initform #'ignore
@@ -374,11 +376,8 @@ connection object, called when the process dies .")
     (set-process-filter proc #'jsonrpc--process-filter)
     (set-process-sentinel proc #'jsonrpc--process-sentinel)
     (with-current-buffer (process-buffer proc)
-      (buffer-disable-undo)
       (set-marker (process-mark proc) (point-min))
       (let ((inhibit-read-only t)) (erase-buffer) (read-only-mode t) proc))
-    (with-current-buffer stderr
-      (buffer-disable-undo))
     (process-put proc 'jsonrpc-connection conn)))
 
 (cl-defmethod jsonrpc-connection-send ((connection jsonrpc-process-connection)
@@ -419,13 +418,13 @@ connection object, called when the process dies .")
 (cl-defmethod jsonrpc-shutdown ((conn jsonrpc-process-connection)
                                 &optional cleanup)
   "Wait for JSONRPC connection CONN to shutdown.
-With optional CLEANUP, kill any associated buffers."
+With optional CLEANUP, kill any associated buffers. "
   (unwind-protect
       (cl-loop
        with proc = (jsonrpc--process conn) for i from 0
        while (not (process-get proc 'jsonrpc-sentinel-cleanup-started))
        unless (zerop i) do
-       (jsonrpc--warn "Sentinel for %s still hasn't run, deleting it!" proc)
+       (jsonrpc--warn "Sentinel for %s still hasn't run,  deleting it!" proc)
        do
        (delete-process proc)
        (accept-process-output nil 0.1))
@@ -463,13 +462,9 @@ With optional CLEANUP, kill any associated buffers."
                                          (json-null nil))
                                      (json-encode object)))))
 
-(cl-defun jsonrpc--reply
-    (connection id &key (result nil result-supplied-p) (error nil error-supplied-p))
+(cl-defun jsonrpc--reply (connection id &key (result nil result-supplied-p) error)
   "Reply to CONNECTION's request ID with RESULT or ERROR."
-  (apply #'jsonrpc-connection-send connection
-         `(:id ,id
-               ,@(and result-supplied-p `(:result ,result))
-               ,@(and error-supplied-p `(:error ,error)))))
+  (jsonrpc-connection-send connection :id id :result result :error error))
 
 (defun jsonrpc--call-deferred (connection)
   "Call CONNECTION's deferred actions, who may again defer themselves."
@@ -581,8 +576,8 @@ With optional CLEANUP, kill any associated buffers."
                                     (deferred nil))
   "Does actual work for `jsonrpc-async-request'.
 
-Return a list (ID TIMER).  ID is the new request's ID, or nil if
-the request was deferred.  TIMER is a timer object set (or nil, if
+Return a list (ID TIMER). ID is the new request's ID, or nil if
+the request was deferred. TIMER is a timer object set (or nil, if
 TIMEOUT is nil)."
   (pcase-let* ((buf (current-buffer)) (point (point))
                (`(,_ ,timer ,old-id)
@@ -630,17 +625,17 @@ TIMEOUT is nil)."
     (puthash id
              (list (or success-fn
                        (jsonrpc-lambda (&rest _ignored)
-                         (jsonrpc--debug
-                          connection (list :message "success ignored"
-                                           :id id))))
+                                  (jsonrpc--debug
+                                   connection (list :message "success ignored"
+                                                    :id id))))
                    (or error-fn
                        (jsonrpc-lambda (&key code message &allow-other-keys)
-                         (jsonrpc--debug
-                          connection (list
-                                      :message
-                                      (format "error ignored, status set (%s)"
-                                              message)
-                                      :id id :error code))))
+                                  (jsonrpc--debug
+                                   connection (list
+                                               :message
+                                               (format "error ignored, status set (%s)"
+                                                       message)
+                                               :id id :error code))))
                    (setq timer (funcall make-timer)))
              (jsonrpc--request-continuations connection))
     (list id timer)))
