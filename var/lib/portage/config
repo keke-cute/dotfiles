@@ -1,0 +1,6 @@
+/etc/libvirt/libvirtd.conf 6891f844a1a66ea18cd0d574d613ba21
+/etc/sudoers b679ac5d1611aa9ca815224b457b2341
+/etc/locale.gen cbe30e840741d09fecff916084c90bd9
+/etc/portage/savedconfig/x11-wm/dwm-6.2 12d4d1e5acebadca33d7e95c16fec167
+/etc/python-exec/python-exec.conf b441892203292ab0eba68c9dacfbae86
+/etc/conf.d/dmcrypt 8a64af270190d5ecd6e4084d6ccf81de

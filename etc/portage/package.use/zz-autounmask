@@ -8,9 +8,9 @@ sys-boot/grub device-mapper
 media-video/ffmpeg x264 v4l X
 
 # EMACS LOVE U
-app-editors/emacs X xft png imagemagick dynamic-loading
+app-editors/emacs X xft imagemagick dynamic-loading png
 app-emacs/emacs-common-gentoo X
-
+media-gfx/imagemagick png
 #I LOVE EMOJI
 media-libs/freetype png
 
@@ -19,14 +19,13 @@ x11-wm/dwm savedconfig xinerama
 x11-terms/st savedconfig 
 
 # QEMU~
-app-emulation/qemu usbredir sdl spice opengl virgl
+app-emulation/qemu usbredir sdl spice
 app-emulation/libvirt virt-network
 net-misc/remmina rdp
 
 # Feeluodm
 dev-python/PyQt5 dbus gui opengl widgets
 
-www-client/w3m imlib unicode
 # package.use# required by x11-libs/gtk+-3.24.20::gentoo
 # required by x11-themes/adwaita-icon-theme-3.32.0::gentoo
 # required by x11-libs/gtk+-2.24.32-r1::gentoo
