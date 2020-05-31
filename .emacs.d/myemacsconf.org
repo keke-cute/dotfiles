@@ -33,14 +33,10 @@
 #+end_src
 * 预下载基础包
 #+begin_src emacs-lisp
-  (add-to-list 'load-path "~/.emacs.d/el/")
   (straight-use-package 'use-package)
   (straight-use-package 'posframe)
-  (straight-use-package 'company)
   (straight-use-package 'vterm)
   (straight-use-package 'htmlize)
-  (straight-use-package 'yaml-mode)
-
 #+end_src
 * 载入启动界面
   #+BEGIN_SRC emacs-lisp
@@ -125,10 +121,6 @@
     ;; Corrects (and improves) org-mode's native fontification.
     (doom-themes-org-config))
 #+END_SRC
-* Org-mode
-  #+BEGIN_SRC emacs-lisp
-  (add-hook 'org-mode-hook (lambda () (setq truncate-lines nil)))
-  #+END_SRC
 * 包的配置
 ** yasnippet
 #+begin_src emacs-lisp
@@ -175,30 +167,10 @@
 		    :custom
 		    (rime-librime-root "~/.emacs.d/librime/dist")))
    #+END_SRC
-** nox
-   #+BEGIN_SRC emacs-lisp
-     (require 'nox)
-
-     (dolist (hook (list
-		    'js-mode-hook
-		    'rust-mode-hook
-		    'python-mode-hook
-		    'ruby-mode-hook
-		    'java-mode-hook
-		    'sh-mode-hook
-		    'php-mode-hook
-		    'c-mode-common-hook
-		    'c-mode-hook
-		    'c++-mode-hook
-		    'haskell-mode-hook
-		    ))
-       (add-hook hook '(lambda () (nox-ensure))))
-
-   #+END_SRC
-** company
-   #+BEGIN_SRC emacs-lisp
-     (add-hook 'after-init-hook 'global-company-mode)
-   #+END_SRC
+* Org-mode
+  #+BEGIN_SRC emacs-lisp
+    (add-hook 'org-mode-hook (lambda () (setq truncate-lines nil)))
+  #+END_SRC
 * 键位配置
 #+begin_src emacs-lisp
 (global-set-key (kbd "C-c p") 'keke-run-current-file)
