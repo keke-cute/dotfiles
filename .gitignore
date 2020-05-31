@@ -20,6 +20,7 @@
 .emacs.d/rime/installation.yaml
 .emacs.d/rime/luna_pinyin.userdb
 .emacs.d/librime
+.emacs.d/nox/mspyls
 .DS_Store
 st/st
 st/st.o

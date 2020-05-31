@@ -33,12 +33,10 @@
 #+end_src
 * 预下载基础包
 #+begin_src emacs-lisp
-  (add-to-list 'load-path "~/.emacs.d/emacs-lisp/")
   (straight-use-package 'use-package)
   (straight-use-package 'posframe)
   (straight-use-package 'vterm)
   (straight-use-package 'htmlize)
-  (straight-use-package 'company)
 #+end_src
 * 载入启动界面
   #+BEGIN_SRC emacs-lisp
@@ -134,6 +132,23 @@
     :init
     (add-hook 'prog-mode-hook #'yas-minor-mode))
 #+end_src
+** company
+   #+BEGIN_SRC emacs-lisp
+     (straight-use-package 'company)
+     (use-package 
+       company 
+       :defer 2 
+       :hook (after-init . global-company-mode) 
+       :init (setq company-tooltip-align-annotations t company-idle-delay 0 company-echo-delay 0
+		   company-minimum-prefix-length 1 company-require-match nil company-dabbrev-ignore-case
+		   nil company-dabbrev-downcase nil company-show-numbers t) 
+       :config 
+       :bind (:map company-active-map
+		   ("M-n" . nil) 
+		   ("M-p" . nil) 
+		   ("C-n" . #'company-select-next) 
+		   ("C-p" . #'company-select-previous)))
+   #+END_SRC
 ** IVY all
 #+begin_src emacs-lisp
   (straight-use-package 'ivy)
@@ -171,8 +186,8 @@
    #+END_SRC
 ** nox
    #+BEGIN_SRC emacs-lisp
+     (add-to-list 'load-path "~/.emacs.d/nox/")
      (require 'nox)
-
      (dolist (hook (list
 		    'js-mode-hook
 		    'rust-mode-hook
