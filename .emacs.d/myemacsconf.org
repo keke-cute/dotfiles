@@ -214,6 +214,7 @@
        (meow-layout 'qwerty)
        :config
        (meow-leader-define-key
+      '("r" . keke-run-current-file)
       '("k" . kill-buffer)
       '("l" . goto-line)
       '("h" . other-window)
@@ -222,7 +223,7 @@
       '("/" . swiper)
       '("\\" . split-window-right)
       '("m" . magit-status)
-      '("f" . find-file)
+      '("f" . counsel-find-file)
       '("F" . find-file-literally))
 
      (meow-leader-define-mode-key
