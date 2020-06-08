@@ -25,7 +25,7 @@ net-misc/remmina rdp
 
 # Feeluodm
 dev-python/PyQt5 dbus gui opengl widgets
-
+media-libs/libsdl X
 # package.use# required by x11-libs/gtk+-3.24.20::gentoo
 # required by x11-themes/adwaita-icon-theme-3.32.0::gentoo
 # required by x11-libs/gtk+-2.24.32-r1::gentoo
@@ -209,3 +209,5 @@ dev-python/PyQt5 dbus gui opengl widgets
 # required by media-sound/feeluown-3.4.1::gentoo-zh
 # required by dev-python/fuo-xiami-0.2.3::gentoo-zh
 >=media-video/mpv-0.32.0-r1 libmpv
+# required by sys-devel/llvmgold-10::gentoo
+>=sys-devel/llvm-10.0.0 gold

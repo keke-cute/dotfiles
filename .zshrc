@@ -21,7 +21,7 @@ antigen apply
 #export 变量
 export GOPATH="$HOME/go"
 export GO111MODULE=on
-export PATH="$PATH:$HOME/go/bin:/home/keke/.local/bin"
+export PATH="$PATH:$HOME/go/bin:/home/keke/.local/bin:/home/keke/dotfiles/bin"
 #export TERM=xterm
 #补全 
 autoload -U compinit

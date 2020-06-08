@@ -30,12 +30,14 @@ dev-scheme/racket
 dev-vcs/git
 games-action/multimc5
 games-emulation/dolphin
+games-emulation/dosbox
 media-fonts/noto-emoji
 media-fonts/wqy-zenhei
 media-gfx/feh
 media-gfx/flameshot
 media-gfx/imagemagick
 media-gfx/sxiv
+media-libs/libsdl
 media-sound/feeluown
 media-sound/pulsemixer
 media-video/ffmpeg
