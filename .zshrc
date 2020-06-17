@@ -21,7 +21,7 @@ antigen apply
 #export 变量
 export GOPATH="$HOME/go"
 export GO111MODULE=on
-export PATH="$PATH:$HOME/go/bin:/home/keke/.local/bin:/home/keke/dotfiles/bin"
+export PATH="$PATH:$HOME/go/bin:/home/keke/.local/bin:/home/keke/dotfiles/bin:/opt/local/bin"
 #export TERM=xterm
 #补全 
 autoload -U compinit
@@ -35,3 +35,5 @@ alias e="emacs -nw"
 alias luping="ffmpeg -f x11grab -s 1366x768 -r 25 -i $DISPLAY -c:v libx264 -b:v 800k -s 1366x768 test.mp4"
 alias zipai="ffmpeg -f v4l2 -s 640x480 -i /dev/video0 output.mpg"
 alias sudo='sudo env PATH=$PATH'
+alias work="tmux new -s work"
+alias bwork="tmux a -t work"
