@@ -37,7 +37,6 @@
   (straight-use-package 'posframe)
   (straight-use-package 'vterm)
   (straight-use-package 'htmlize)
-  (straight-use-package 'yaml-mode)
 #+end_src
 * 载入启动界面
   #+BEGIN_SRC emacs-lisp
@@ -204,34 +203,20 @@
 		    ))
        (add-hook hook '(lambda () (nox-ensure))))
    #+END_SRC
-** meow
+** xah_fly_keys
    #+BEGIN_SRC emacs-lisp
-     (straight-use-package 'meow)
-     (use-package meow
-       :init
-       (meow-global-mode 1)
-       :custom
-       ;; layout options: qwerty, dvorak, dvp, colemak
-       (meow-layout 'qwerty)
+     (straight-use-package 'xah-fly-keys)
+     (use-package xah-fly-keys
        :config
-       (meow-leader-define-key
-      '("r" . keke-run-current-file)
-      '("k" . kill-buffer)
-      '("l" . goto-line)
-      '("h" . other-window)
-      '("o" . delete-other-windows)
-      '("-" . split-window-below)
-      '("/" . swiper)
-      '("\\" . split-window-right)
-      '("m" . magit-status)
-      '("f" . counsel-find-file)
-      '("F" . find-file-literally))
-
-     (meow-leader-define-mode-key
-      'emacs-lisp-mode
-      '("RET" . eval-buffer)
-      '("SPC" . eval-defun)))
-   #+END_SRC
+       (xah-fly-keys-set-layout 'qwerty)
+       (xah-fly-keys 1))
+   #+END_SRC 
+** which_key
+   #+begin_src emacs-lisp
+     (straight-use-package 'which-key)
+     (which-key-mode)
+   #+end_src
+  
 * Org-mode
   #+BEGIN_SRC emacs-lisp
     (add-hook 'org-mode-hook (lambda () (setq truncate-lines nil)))
