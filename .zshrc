@@ -13,6 +13,7 @@ antigen use oh-my-zsh
 antigen theme romkatv/powerlevel10k
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle git
 antigen apply
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.

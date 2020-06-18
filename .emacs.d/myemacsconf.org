@@ -37,6 +37,7 @@
   (straight-use-package 'posframe)
   (straight-use-package 'vterm)
   (straight-use-package 'htmlize)
+  (straight-use-package 'yaml-mode)
 #+end_src
 * 载入启动界面
   #+BEGIN_SRC emacs-lisp
