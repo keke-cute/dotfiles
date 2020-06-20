@@ -21,6 +21,7 @@
 .emacs.d/rime/luna_pinyin.userdb
 .emacs.d/librime
 .emacs.d/nox/mspyls
+.emacs.d/.cache
 .DS_Store
 st/st
 st/st.o

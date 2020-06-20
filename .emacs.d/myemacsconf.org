@@ -184,7 +184,6 @@
 		    :custom
 		    (rime-librime-root "~/.emacs.d/librime/dist")))
    #+END_SRC
-** nox
    #+BEGIN_SRC emacs-lisp
      (add-to-list 'load-path "~/.emacs.d/nox/")
      (require 'nox)
@@ -202,6 +201,7 @@
 		    'haskell-mode-hook
 		    ))
        (add-hook hook '(lambda () (nox-ensure))))
+     (add-to-list 'nox-server-programs '(html-mode . ("html-language-server" "--args")))
    #+END_SRC
 ** xah_fly_keys
    #+BEGIN_SRC emacs-lisp
@@ -217,6 +217,34 @@
      (which-key-mode)
    #+end_src
   
+** lsp
+   #+begin_src emacs-lisp
+     (straight-use-package 'lsp-mode)
+     (straight-use-package 'lsp-ui)
+     (straight-use-package 'lsp-ivy)
+     (straight-use-package 'lsp-treemacs)
+     (straight-use-package 'which-key)
+
+     ;; set prefix for lsp-command-keymap (few alternatives - "C-l", "C-c l")
+     (setq lsp-keymap-prefix "s-l")
+
+     (use-package lsp-mode
+	 :hook (;; replace XXX-mode with concrete major-mode(e. g. python-mode)
+		 (html-mode . lsp)
+		 ;; if you want which-key integration
+		 (lsp-mode . lsp-enable-which-key-integration))
+	 :commands lsp)
+
+     ;; optionally
+     (use-package lsp-ui :commands lsp-ui-mode)
+     ;; if you are ivy user
+     (use-package lsp-ivy :commands lsp-ivy-workspace-symbol)
+     (use-package lsp-treemacs :commands lsp-treemacs-errors-list)
+     ;; optional if you want which-key integration
+     (use-package which-key
+	 :config
+	 (which-key-mode))
+   #+end_src
 * Org-mode
   #+BEGIN_SRC emacs-lisp
     (add-hook 'org-mode-hook (lambda () (setq truncate-lines nil)))
@@ -310,6 +338,6 @@
 	    ((string-equal system-type "gnu/linux")
 	     (mapc
 	      (lambda ($fpath)
-		(shell-command (format "qutebrowser \"%s\"" $fpath)))
+		(shell-command (format "firefox \"%s\"" $fpath)))
 	      $file-list))))))
    #+END_SRC
