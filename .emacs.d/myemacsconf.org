@@ -191,25 +191,6 @@
 		    :custom
 		    (rime-librime-root "~/.emacs.d/librime/dist")))
    #+END_SRC
-   #+BEGIN_SRC emacs-lisp
-     (add-to-list 'load-path "~/.emacs.d/nox/")
-     (require 'nox)
-     (dolist (hook (list
-		    'js-mode-hook
-		    'rust-mode-hook
-		    'python-mode-hook
-		    'ruby-mode-hook
-		    'java-mode-hook
-		    'sh-mode-hook
-		    'php-mode-hook
-		    'c-mode-common-hook
-		    'c-mode-hook
-		    'c++-mode-hook
-		    'haskell-mode-hook
-		    ))
-       (add-hook hook '(lambda () (nox-ensure))))
-     (add-to-list 'nox-server-programs '(html-mode . ("html-language-server" "--args")))
-   #+END_SRC
 ** xah_fly_keys
    #+BEGIN_SRC emacs-lisp
      (straight-use-package 'xah-fly-keys)
@@ -239,6 +220,7 @@
 	 :hook (;; replace XXX-mode with concrete major-mode(e. g. python-mode)
 		 (html-mode . lsp)
 		 (css-mode . lsp)
+		 (js-mode . lsp)
 		 ;; if you want which-key integration
 		 (lsp-mode . lsp-enable-which-key-integration))
 	 :commands lsp)
