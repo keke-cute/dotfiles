@@ -31,6 +31,8 @@ zmodload zsh/complist
 compinit
 _comp_options+=(globdots)		# Include hidden files.
 
+
+
 alias fuck="sudo wrmsr -a 0x1FC 262238;"
 alias e="emacs -nw"
 alias luping="ffmpeg -f x11grab -s 1366x768 -r 25 -i $DISPLAY -c:v libx264 -b:v 800k -s 1366x768 test.mp4"
