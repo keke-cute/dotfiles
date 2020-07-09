@@ -31,10 +31,12 @@ zmodload zsh/complist
 compinit
 _comp_options+=(globdots)		# Include hidden files.
 
-
+alias fuck="sudo wrmsr -a 0x1FC 262238;"
 alias e="emacs -nw"
 alias luping="ffmpeg -f x11grab -s 1366x768 -r 25 -i $DISPLAY -c:v libx264 -b:v 800k -s 1366x768 test.mp4"
 alias zipai="ffmpeg -f v4l2 -s 640x480 -i /dev/video0 output.mpg"
 alias sudo='sudo env PATH=$PATH'
 alias work="tmux new -s work"
 alias bwork="tmux a -t work"
+export LANG=zh_CN.UTF-8
+export LANGUAGE=zh_CN:en_US
