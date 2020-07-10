@@ -1,0 +1,96 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Software\Blizzard Entertainment]
+
+[HKEY_CURRENT_USER\Software\Blizzard Entertainment\Warcraft III]
+
+[HKEY_CURRENT_USER\Software\Blizzard Entertainment\Warcraft III\Gameplay]
+"gamespeed"=dword:00000003
+"mousescroll"=dword:00000028
+"mousescrolldisable"=dword:00000000
+"keyscroll"=dword:00000032
+"tooltips"=dword:00000001
+"healthbars"=dword:00000000
+"formations"=dword:00000001
+"formationtoggle"=dword:00000001
+"herobar"=dword:00000001
+"netgameport"=dword:000017e0
+"inputsprocket"=dword:00000000
+"ammtype"=dword:00000000
+"ammstyles"=""
+"ammmapprefs"=""
+"ammmaphashes"=""
+"ammrace"=dword:00000020
+"customfilter"=dword:00000000
+"custommask"=dword:00000000
+"allyFilter"=dword:00000002
+"creepFilter"=dword:00000001
+"terrainFilter"=dword:00000001
+"subgrouporder"=dword:00000000
+"multiboardon"=dword:00000000
+"customkeys"=dword:00000000
+"schedrace"=dword:00000020
+"autosaveReplay"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\Blizzard Entertainment\Warcraft III\Map]
+"skirmish_V0"="Maps\\(4)Deadwaterdrop.w3m"
+"skirmish_V1"="Maps\\Download\\(2)MIL-EchoIsles.w3x"
+"lan_V0"=""
+"lan_V1"="Maps\\(4)TurtleRock.w3x"
+"battlenet_V0"=""
+"battlenet_V1"=""
+
+[HKEY_CURRENT_USER\Software\Blizzard Entertainment\Warcraft III\Misc]
+"seenintromovie"=dword:00000001
+"campaignprofile"="congyang"
+"clickedtourn"=dword:00000000
+"clickedclan"=dword:00000000
+"clickedladder"=dword:00000000
+"clickedad"=dword:00000000
+"chatsupport"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\Blizzard Entertainment\Warcraft III\Sound]
+"provider"=dword:00000002
+"positional"=dword:00000001
+"environmental"=dword:00000001
+"music"=dword:00000001
+"musicvolume"=dword:00000028
+"sfx"=dword:00000001
+"sfxvolume"=dword:00000064
+"ambient"=dword:00000001
+"movement"=dword:00000001
+"unit"=dword:00000001
+"subtitles"=dword:00000000
+"nomidi"=dword:00000000
+"softwaremidi"=dword:00000001
+"nosoundwarn"=dword:00000001
+"donotusewaveout"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\Blizzard Entertainment\Warcraft III\String]
+"userbnet"=""
+"userlocal"="congyang"
+
+[HKEY_CURRENT_USER\Software\Blizzard Entertainment\Warcraft III\Video]
+"reswidth"=dword:00000400
+"resheight"=dword:00000300
+"colordepth"=dword:00000020
+"adapter"=dword:00000000
+"refreshrate"=dword:0000004b
+"gamma"=dword:0000002a
+"modeldetail"=dword:00000001
+"animquality"=dword:00000002
+"texquality"=dword:00000002
+"miplevel"=dword:00000000
+"texcolordepth"=dword:00000020
+"particles"=dword:00000002
+"lights"=dword:00000002
+"lockfb"=dword:00000001
+"unitshadows"=dword:00000001
+"occlusion"=dword:00000001
+"cinematicoverrides"=dword:00000000
+"cinematicrefresh"=dword:0000004b
+"cinematicbpp"=dword:00000020
+"cinematicwidth"=dword:00000320
+"cinematicheight"=dword:00000258
+"spellfilter"=dword:00000002
+"maxfps"=dword:000000c8
