@@ -1,0 +1,3 @@
+exec sudo sudo cpupower frequency-set -g performance ;
+exec sudo cpupower frequency-set -d 3GHz ; 
+exec sudo wrmsr -a 0x1FC 262238;
