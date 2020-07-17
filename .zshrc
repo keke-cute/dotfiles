@@ -20,9 +20,7 @@ antigen apply
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 #export 变量
-export GOPATH="$HOME/go"
-export GO111MODULE=on
-export PATH="$PATH:$HOME/go/bin:/home/keke/.local/bin:/home/keke/dotfiles/bin:/opt/local/bin"
+export PATH="$PATH:/home/keke/.local/bin:/home/keke/dotfiles/bin:/home/keke/go/bin"
 #export TERM=xterm
 #补全 
 autoload -U compinit
