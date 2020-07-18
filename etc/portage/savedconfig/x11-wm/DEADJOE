@@ -1,0 +1,12 @@
+
+*** These modified files were found in JOE when it aborted on Sat Jul 11 09:10:22 2020
+*** JOE was aborted by UNIX signal 1
+
+*** File '(Unnamed)'
+/mnt/gentoo/etc/portage/savedconfig/x11-wm/dwm-6.2
+
+*** File '* Startup Log *'
+Processing '/etc/joe/jmacsrc'...
+Processing '/etc/joe/ftyperc'...
+Finished processing /etc/joe/ftyperc
+Finished processing /etc/joe/jmacsrc
